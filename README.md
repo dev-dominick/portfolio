@@ -2,7 +2,7 @@
 
 ## Description
 
-Hi! My name is Dominick and this is my portfolio built with React.js!
+Hi! My name is Dominick and this is my Version 2.0 of my portfolio built with React.js!
 
 ## Table of Contents
 
@@ -19,9 +19,9 @@ To install this application, fork my repo, clone the project in your terminal, n
 
 ## Usage
 
-https://dev-dominick.github.io/react-portfolio/
+www.Dominickthedev.com
 
-![alt text](./public/react-portfolio.png)
+<!-- ![alt text](./public/react-portfolio.png) -->
 
 ## Credits
 
