@@ -1,5 +1,5 @@
 import React from 'react'
-import "./projects.css";
+import "../styles/projects.css";
 import Dailymealplanner from "./dailymealplanner";
 import Workdayplanner from './workdayplanner';
 import Passwordgenerator from './Passwordgenerator';

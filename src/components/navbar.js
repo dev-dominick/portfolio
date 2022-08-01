@@ -13,7 +13,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 // import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
-import "./navbar.css";
+import "../styles/navbar.css";
 
 
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -65,8 +65,8 @@ const ResponsiveAppBar = () => {
       backgroundColor: scrolled ? "transparent !important" : "grey !important" 
 
      }} position="sticky">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+      <Container maxWidth="x1">
+        <Toolbar >
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
             variant="h5"
@@ -86,8 +86,9 @@ const ResponsiveAppBar = () => {
             Dominick Albano
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          {/* <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
+              border-radius="10px"
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -148,9 +149,9 @@ const ResponsiveAppBar = () => {
                 <Typography textAlign="center">Resume</Typography>
               </MenuItem>
             </Menu>
-          </Box>
+          </Box>  */}
 
-          <Typography
+          {/* <Typography
             variant="h5"
             noWrap
             component="a"
@@ -161,30 +162,37 @@ const ResponsiveAppBar = () => {
               flexGrow: 1,
               fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: "300000rem",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            Dev Dominick
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            Devel Dominick
+          </Typography> */}
+
+
+
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex", justifyContent: "flex-end" } }}>
 
             {/* about me button */}
             <Button
               key="about"
               onClick={handleCloseNavMenu}
               sx={{
+                borderRadius: 8,
                 mr: 5,
                 my: 5,
+                pr: 2,
+                pl: 2,
+                py: 2,
                 color: "white",
                 display: "block",
-                marginLeft: 20,
+                // marginLeft: 20,
                 backgroundColor: "black"
               }}
               component={Link}
               to="/about"
-              variant="contained"
+              variant="text"
               // color="primary"
             >
               About Me
