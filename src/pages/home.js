@@ -1,9 +1,12 @@
 import React from 'react'
 // import logo from '../logo.svg';
 import '../styles/home.css';
-
+import Navbar from '../components/navbar';
 export default function Home() {
+
   return (
+  // <div>
+  //   <Navbar/>
     <div className="Home">
       <header className="Home-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
@@ -13,5 +16,6 @@ export default function Home() {
         </main>
       </header>
     </div>
+    // </div>
   );
 }
