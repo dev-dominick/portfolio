@@ -82,99 +82,94 @@ export default function Navbar() {
     }
   })
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  // const handleOpenUserMenu = (event) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
 
 
 
 
   return (
-    <AppBar sx={{
-      backgroundColor: scrolled ? "red !important" : "grey !important"
-      // transparent
-      
-
-    }} position="sticky">
-      <Container maxWidth="x1">
-        <Toolbar >
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "white",
-              textDecoration: "none",
-            }}
-          >
-            Dominick Albano
-          </Typography>
+    // <div className="nav-container">
+      <AppBar
+        className="nav-container"
+        sx={{
+          backgroundColor: scrolled ? "black !important" : "transparent !important"
+          // transparent
 
 
-          <Box sx={{ 
-            padding: 1,
-            flexGrow: 1, 
-            display: { 
-              xs: "none", 
-              md: "flex", 
-              justifyContent: "flex-end" 
-              } }}>
-
-            <CustomButton
-              key="about"
-              onClick={handleCloseNavMenu}
-              component={Link }
-              to="/about"
-              // href="/about"
-
+        }} >
+        <Container maxWidth="x1">
+          <Toolbar >
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "white",
+                textDecoration: "none",
+              }}
             >
-              About Me
-            </CustomButton>
-
-            <CustomButton
-              key="project"
-              onClick={handleCloseNavMenu}
-
-              component={Link}
-              to="/projects"
-              variant="contained"
-            >
-              Projects
-            </CustomButton>
-
-            <CustomButton
-              key="contact"
-              onClick={handleCloseNavMenu}
-
-              component={Link}
-              to="/contact"
-              variant="contained"
-            >
-              Contact me
-            </CustomButton>
-
-          </Box>
+              Dominick Albano
+            </Typography>
 
 
-        </Toolbar>
-      </Container>
-    </AppBar>
+            <Box sx={{
+              padding: 1,
+              flexGrow: 1,
+              display: {
+                xs: "none",
+                md: "flex",
+                justifyContent: "flex-end"
+              }
+            }}>
+
+              <CustomButton
+                key="about"
+              // onClick={() => {
+              //   ('clicked')
+              // }}
+              // component={Link}
+              // to="about"
+
+
+
+              >
+                <a href='#about-section'>About Me</a>
+              </CustomButton>
+
+              <CustomButton
+                key="project"
+                // onClick={handleCloseNavMenu}
+
+                // component={Link}
+                // to="/projects"
+                variant="contained"
+              >
+                <a href='#project-section'>Projects</a>
+              </CustomButton>
+
+              <CustomButton
+                key="contact"
+                // onClick={handleCloseNavMenu}
+
+                component={Link}
+                to="/contact"
+                variant="contained"
+              >
+                Contact me
+              </CustomButton>
+
+            </Box>
+
+
+          </Toolbar>
+        </Container>
+      </AppBar>
+    // </div>
   );
 };

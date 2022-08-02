@@ -1,10 +1,9 @@
-.navbar {
-  text-align: center;
+.nav-container {
+  position: fixed;
 }
 
-.MuiAppBar-colorPrimary {
-  /* background-color: rgba(128, 128, 128, 0.232) !important; */
-  color: white !important;
+.navbar {
+  text-align: center;
 }
 
 
