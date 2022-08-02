@@ -10,6 +10,7 @@ import "../styles/navbar.css";
 import ButtonUnstyled, { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
 import { styled } from '@mui/system';
 
+import About from "../pages/aboutMe";
 
 
 
@@ -101,7 +102,9 @@ export default function Navbar() {
 
   return (
     <AppBar sx={{
-      backgroundColor: scrolled ? "transparent !important" : "grey !important"
+      backgroundColor: scrolled ? "red !important" : "grey !important"
+      // transparent
+      
 
     }} position="sticky">
       <Container maxWidth="x1">
@@ -137,8 +140,10 @@ export default function Navbar() {
             <CustomButton
               key="about"
               onClick={handleCloseNavMenu}
-              component={Link}
+              component={Link }
               to="/about"
+              // href="/about"
+
             >
               About Me
             </CustomButton>
