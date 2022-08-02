@@ -1,6 +1,5 @@
 import React from 'react'
 // import logo from '../logo.svg';
-// import AdbIcon from "@mui/icons-material/Adb";
 import '../App.css';
 
 export default function Home() {
