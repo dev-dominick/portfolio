@@ -9,7 +9,7 @@ import Notepad from '../components/notepad';
 export default function Projects() {
   return (
     
-    <div className='ProjectsContainer'>
+    <div className='ProjectsContainer' id='project-section'>
 
       <h1>projects</h1>
 
