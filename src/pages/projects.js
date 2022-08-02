@@ -9,21 +9,24 @@ import Notepad from '../components/notepad';
 export default function Projects() {
   return (
     
-    <div>
+    <div className='ProjectsContainer'>
+
+      <h1>projects</h1>
+
       <section class="section-area" id="projects">
+
         <div class="div-container">
+
           <Dailymealplanner/>
-        
           <Workdayplanner/>
-        
           <Passwordgenerator/>
-       
           <Codequiz/>
-        
           <Notepad/>
-       
+
         </div>
+
       </section>
+
     </div>
   );
 }
