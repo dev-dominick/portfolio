@@ -4,8 +4,7 @@ import '../styles/aboutMe.css'
 
 export default function About() {
   return (
-    <div>
-      {/* <header className="aboutme-header"> */}
+    <div className='AboutContainer'>
       <main className="aboutme-header">
         <h1 className="header">About Me</h1>
         <p className="aboutMeText">
@@ -23,10 +22,9 @@ export default function About() {
           similar to agile development, in many of my projects. Excited to learn
           new technologies and implement them into future personal and
           open-source projects.
-          TESTING
+          
         </p>
       </main>
-      {/* </header> */}
     </div>
   );
 }
