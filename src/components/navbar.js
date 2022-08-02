@@ -13,17 +13,17 @@ import { styled } from '@mui/system';
 
 
 
-const blue = {
-  500: '#007FFF',
-  600: '#0072E5',
-  700: '#0059B2',
+const color = {
+  500: '#82b74b',
+  600: '#c94c4c',
+  700: '#4040a1',
 };
 
 const CustomButton = styled(ButtonUnstyled)`
   font-family: monospace, sans-serif;
   font-weight: bold;
   font-size: 0.875rem;
-  background-color: ${blue[500]};
+  background-color: ${color[500]};
   border-radius: 8px;
   color: white;
   transition: all 150ms ease;
@@ -38,11 +38,11 @@ const CustomButton = styled(ButtonUnstyled)`
 
 
   &:hover {
-    background-color: ${blue[600]};
+    background-color: ${color[600]};
   }
 
   &.${buttonUnstyledClasses.active} {
-    background-color: ${blue[700]};
+    background-color: ${color[700]};
   }
 
   &.${buttonUnstyledClasses.focusVisible} {
