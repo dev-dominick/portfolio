@@ -4,7 +4,7 @@ import '../styles/aboutMe.css'
 
 export default function About() {
   return (
-    <div className='AboutContainer'>
+    <div className='AboutContainer' id='about-section'>
       <main className="aboutme-header">
         <h1 className="header">About Me</h1>
         <p className="aboutMeText">
