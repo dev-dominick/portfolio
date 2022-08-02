@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import About from './components/aboutMe'
-import Contact from './components/contactMe'
-import Projects from './components/projects'
-import Home from './components/home'
+import About from './pages/aboutMe'
+import Contact from './pages/contactMe'
+import Projects from './pages/projects'
+import Home from './pages/home'
 import './App.css'
 
 //import the nav bar component here

@@ -2,23 +2,62 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-// import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-// import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-// import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
+import ButtonUnstyled, { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
+import { styled } from '@mui/system';
 
 
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-const ResponsiveAppBar = () => {
+
+const blue = {
+  500: '#007FFF',
+  600: '#0072E5',
+  700: '#0059B2',
+};
+
+const CustomButton = styled(ButtonUnstyled)`
+  font-family: monospace, sans-serif;
+  font-weight: bold;
+  font-size: 0.875rem;
+  background-color: ${blue[500]};
+  border-radius: 8px;
+  color: white;
+  transition: all 150ms ease;
+  cursor: pointer;
+  border: none;
+  width: 10%;
+  height: '10%';
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem;
+
+
+
+  &:hover {
+    background-color: ${blue[600]};
+  }
+
+  &.${buttonUnstyledClasses.active} {
+    background-color: ${blue[700]};
+  }
+
+  &.${buttonUnstyledClasses.focusVisible} {
+    box-shadow: 0 4px 20px 0 rgba(61, 71, 82, 0.1), 0 0 0 5px rgba(0, 127, 255, 0.5);
+    outline: none;
+  }
+
+  &.${buttonUnstyledClasses.disabled} {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+`;
+
+
+export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   // const [, setAnchorElUser] = React.useState(null);
   const [scrolled, setScrolled] = React.useState(false);
@@ -31,7 +70,7 @@ const ResponsiveAppBar = () => {
         // let maxScroll = document.body.scrollHeight - window.innerHeight;
         // console.log(maxScroll)
         console.log(currentScrollPos);
-        if (currentScrollPos === 0 ) {
+        if (currentScrollPos === 0) {
           setScrolled(false);
 
           // console.log(currentScrollPos)
@@ -61,13 +100,12 @@ const ResponsiveAppBar = () => {
 
 
   return (
-    <AppBar sx={{ 
-      backgroundColor: scrolled ? "transparent !important" : "grey !important" 
+    <AppBar sx={{
+      backgroundColor: scrolled ? "transparent !important" : "grey !important"
 
-     }} position="sticky">
+    }} position="sticky">
       <Container maxWidth="x1">
         <Toolbar >
-          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
@@ -86,163 +124,52 @@ const ResponsiveAppBar = () => {
             Dominick Albano
           </Typography>
 
-          {/* <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              border-radius="10px"
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              <MenuItem
-                key="about"
-                onClick={handleCloseNavMenu}
-                component={Link}
-                to="/about"
-              >
-                <Typography textAlign="center">About</Typography>
-              </MenuItem>
-              <MenuItem
-                key="projects"
-                onClick={handleCloseNavMenu}
-                component={Link}
-                to="/projects"
-              >
-                <Typography textAlign="center">Projects</Typography>
-              </MenuItem>
-              <MenuItem
-                key="contact"
-                onClick={handleCloseNavMenu}
-                component={Link}
-                to="/contact"
-              >
-                <Typography textAlign="center">Contact</Typography>
-              </MenuItem>
-              <MenuItem
-                key="resume"
-                onClick={handleCloseNavMenu}
-                component={Link}
-                to="/resume"
-              >
-                <Typography textAlign="center">Resume</Typography>
-              </MenuItem>
-            </Menu>
-          </Box>  */}
 
-          {/* <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 5,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: "300000rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Devel Dominick
-          </Typography> */}
+          <Box sx={{ 
+            padding: 1,
+            flexGrow: 1, 
+            display: { 
+              xs: "none", 
+              md: "flex", 
+              justifyContent: "flex-end" 
+              } }}>
 
-
-
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex", justifyContent: "flex-end" } }}>
-
-            {/* about me button */}
-            <Button
+            <CustomButton
               key="about"
               onClick={handleCloseNavMenu}
-              sx={{
-                borderRadius: 8,
-                mr: 5,
-                my: 5,
-                pr: 2,
-                pl: 2,
-                py: 2,
-                color: "white",
-                display: "block",
-                // marginLeft: 20,
-                backgroundColor: "black"
-              }}
               component={Link}
               to="/about"
-              variant="text"
-              // color="primary"
             >
               About Me
-            </Button>
+            </CustomButton>
 
-            {/* Projects button */}
-            <Button
+            <CustomButton
               key="project"
               onClick={handleCloseNavMenu}
-              sx={{
-                mr: 5,
-                my: 5,
-                color: "white",
-                display: "block",
-                backgroundColor: "black"
-              }}
+
               component={Link}
               to="/projects"
               variant="contained"
-              color="primary"
             >
               Projects
-            </Button>
+            </CustomButton>
 
-            {/* Contacts Button */}
-            <Button
+            <CustomButton
               key="contact"
               onClick={handleCloseNavMenu}
-              sx={{
-                mr: 5,
-                my: 5,
-                color: "white",
-                display: "block",
-                backgroundColor: "black"
 
-              }}
               component={Link}
               to="/contact"
               variant="contained"
-              color="primary"
             >
               Contact me
-            </Button>
+            </CustomButton>
 
           </Box>
 
-         
+
         </Toolbar>
       </Container>
     </AppBar>
   );
 };
-export default ResponsiveAppBar;
