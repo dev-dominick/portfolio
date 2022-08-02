@@ -1,8 +1,8 @@
-.routesContainer {
+/* .routesContainer {
   width: 100vw;
   height: 80vh;
 
-}
+} */
 
 /* .App {
   text-align: center;
@@ -24,7 +24,7 @@
     background: url('../public/galaxy-portfolio.jpg');
     background-size: contain;
     width: 100vw;
-} */
+} 
 
 /* .App-header {
   background-color: black;
