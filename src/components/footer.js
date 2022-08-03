@@ -11,11 +11,14 @@ const styles = {
   footerStyle: {
     position: 'fixed',
     bottom: '0px',
-    width: '100vw',
-    backgroundColor: 'grey',
+    width: '100%',
+    backgroundColor: 'transparent',
     // color: 'white'
     // // fontSize: 'large',
     // opacity: '.5'
+  },
+  iconStyle: {
+    color: 'red',
   }
 }
 
@@ -34,6 +37,7 @@ export default function Footer() {
       onChange={handleChange}
     >
       <BottomNavigationAction
+        sx={styles.iconStyle}
         href="https://github.com/dev-dominick"
         target="_blank"
         label="GitHub"
@@ -41,6 +45,7 @@ export default function Footer() {
         icon={<GitHubIcon />}
       />
       <BottomNavigationAction
+        sx={styles.iconStyle}
         href="https://www.linkedin.com/in/dominick-albano/"
         target="_blank"
         label="LinkedIn"
@@ -48,6 +53,7 @@ export default function Footer() {
         icon={<LinkedInIcon />}
       />
       <BottomNavigationAction
+        sx={styles.iconStyle}
         href="#comingsoon"
         target="_blank"
         label="Twitter"
