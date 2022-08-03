@@ -5,7 +5,7 @@ function HomeIntro() {
   return (
     <div className='homeIntroContainer' >
         <h1 className='name'>Dominick Albano</h1>
-        <h2 className='title'>Full Stack Developer</h2>
+        <h2 className='title'>Full Stack Web Developer</h2>
     </div>
   )
 }
