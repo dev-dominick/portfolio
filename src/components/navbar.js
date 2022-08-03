@@ -133,24 +133,24 @@ export default function Navbar() {
               // onClick={() => {
               //   ('clicked')
               // }}
-              // component={Link}
-              // to="about"
+              component={Link}
+              to="about"
 
 
 
               >
-                <a href='#about-section'>About Me</a>
+                About Me
               </CustomButton>
 
               <CustomButton
                 key="project"
                 // onClick={handleCloseNavMenu}
 
-                // component={Link}
-                // to="/projects"
+                component={Link}
+                to="/projects"
                 variant="contained"
               >
-                <a href='#project-section'>Projects</a>
+                Projects
               </CustomButton>
 
               <CustomButton
