@@ -1,10 +1,10 @@
 import React from 'react'
 import "../styles/projects.css";
-import Dailymealplanner from "../components/dailymealplanner";
-import Workdayplanner from '../components/workdayplanner';
-import Passwordgenerator from '../components/Passwordgenerator';
-import Codequiz from '../components/codequiz';
-import Notepad from '../components/notepad';
+import Dailymealplanner from "../projectComponents/dailymealplanner";
+import Workdayplanner from '../projectComponents/workdayplanner';
+import Passwordgenerator from '../projectComponents/Passwordgenerator';
+import Codequiz from '../projectComponents/codequiz';
+import Notepad from '../projectComponents/notepad';
 
 export default function Projects() {
   return (
