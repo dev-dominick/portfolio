@@ -9,7 +9,6 @@ function LandingPage() {
   return (
     <div>
       <div className='landingPage-container'>
-          {/* < Navbar /> */}
           < Home />
           < About />
           < Projects />
