@@ -2,6 +2,7 @@ import React from 'react'
 // import logo from '../logo.svg';
 import '../styles/home.css';
 import Navbar from '../components/navbar';
+import HomeIntro from '../components/homeIntro';
 export default function Home() {
 
   return (
@@ -11,9 +12,8 @@ export default function Home() {
       <header className="Home-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
 
-        <main>
-          Hello World
-        </main>
+        < HomeIntro />
+       
       </header>
     </div>
     // </div>
