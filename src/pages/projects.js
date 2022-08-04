@@ -1,10 +1,7 @@
 import React from 'react'
 import "../styles/projects.css";
-import Dailymealplanner from "../projectComponents/dailymealplanner";
-import Workdayplanner from '../projectComponents/workdayplanner';
-import Passwordgenerator from '../projectComponents/Passwordgenerator';
-import Codequiz from '../projectComponents/codequiz';
-import Notepad from '../projectComponents/notepad';
+import DisplayProjects from "../components/DisplayProjects";
+
 
 export default function Projects() {
   return (
@@ -17,11 +14,8 @@ export default function Projects() {
 
         <div class="div-container">
 
-          <Dailymealplanner/>
-          <Workdayplanner/>
-          <Passwordgenerator/>
-          <Codequiz/>
-          <Notepad/>
+          < DisplayProjects />
+
 
         </div>
 

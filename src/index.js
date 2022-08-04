@@ -14,8 +14,8 @@ root.render(
     <BrowserRouter>
       < Navbar />
       < App />
-      {/* < Socials /> */}
-      < Footer />
+      < Socials />
+      {/* < Footer /> */}
     </BrowserRouter>
   </React.StrictMode>
 );
