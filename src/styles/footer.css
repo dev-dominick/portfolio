@@ -1,3 +1,20 @@
-.footerContainer {
-    
+.MuiBottomNavigationAction-root.Mui-selected {
+    color: yellow !important;
 }
+/* 
+.Mui-selected {
+    color: yellow;
+} */
+
+/* .MuiBottomNavigationAction-root {
+    color: red;
+} */
+
+/* .MuiBottomNavigationAction-iconOnly{
+    color: red;
+} */
+
+/* .MuiBottomNavigationAction-label{
+    color: red;
+} */
+

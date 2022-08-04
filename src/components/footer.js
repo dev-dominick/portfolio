@@ -13,22 +13,29 @@ const styles = {
     bottom: '0px',
     width: '100%',
     backgroundColor: 'transparent',
-    // color: 'white'
-    // // fontSize: 'large',
-    // opacity: '.5'
+    marginBottom: '1rem'
   },
-  iconStyle: {
-    color: 'red',
-  }
+  // bgcolor: 'transparent',
+  //   '& .Mui-selected': {
+  //     '& .MuiBottomNavigationAction-label': {
+  //       color: 'red'
+  //     },
+  //     '& .MuiSvgIcon-root, & .MuiBottomNavigationAction-label': {
+  //       color: 'green'
+  //     }
+  //   }
+
 }
+
+
 
 export default function Footer() {
   const [value, setValue] = React.useState('recents');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-  };
 
+  };
   return (
     <BottomNavigation
       style={styles.footerStyle}
@@ -37,19 +44,24 @@ export default function Footer() {
       onChange={handleChange}
     >
       <BottomNavigationAction
-        sx={styles.iconStyle}
+        sx={{ 
+          bgcolor: 'yellow',
+          color: 'red',
+          '.mui-selected': 'green !important',
+          
+             }}  
         href="https://github.com/dev-dominick"
         target="_blank"
         label="GitHub"
         value="GitHub"
         icon={<GitHubIcon />}
       />
-      <BottomNavigationAction
+      {/* <BottomNavigationAction
         sx={styles.iconStyle}
         href="https://www.linkedin.com/in/dominick-albano/"
         target="_blank"
         label="LinkedIn"
-        value="favorites"
+        value="LinkedIn"
         icon={<LinkedInIcon />}
       />
       <BottomNavigationAction
@@ -59,7 +71,7 @@ export default function Footer() {
         label="Twitter"
         value="nearby"
         icon={<TwitterIcon />}
-      />
+      /> */}
     </BottomNavigation>
   );
 }
