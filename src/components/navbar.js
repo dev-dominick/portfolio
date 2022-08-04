@@ -47,7 +47,13 @@ const CustomButton = styled(ButtonUnstyled)`
   }
 
   &.${buttonUnstyledClasses.active} {
-    background-color: ${color[700]};
+    // background-color: ${color[700]},
+    text-decoration: underline;
+  }
+
+  &.${buttonUnstyledClasses.selected} {
+    // background-color: ${color[700]},
+    text-decoration: underline;
   }
 
   &.${buttonUnstyledClasses.focusVisible} {
@@ -55,10 +61,7 @@ const CustomButton = styled(ButtonUnstyled)`
     outline: none;
   }
 
-  // &.${buttonUnstyledClasses.disabled} {
-  //   opacity: 0.5;
-  //   cursor: not-allowed;
-  // }
+ 
 `;
 
 
@@ -66,6 +69,15 @@ export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   // const [, setAnchorElUser] = React.useState(null);
   const [scrolled, setScrolled] = React.useState(false);
+  const [clicked, setClicked] = React.useState(false);
+
+
+  // React.useEffect(() => {
+  //   let underline = document.getElementById('toUnderline');
+  //   if () {
+
+  //   }
+  // })
 
   React.useEffect(() => {
     console.log(scrolled);
@@ -106,7 +118,7 @@ export default function Navbar() {
           display: 'flex',
           height: '10rem',
           // border: '10px solid white',
-          
+
 
         }}>
 
@@ -117,80 +129,85 @@ export default function Navbar() {
           display: 'flex',
           
         }}> */}
-        
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              // mr: 2,
-              display: { xs: "flex", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "white",
-              textDecoration: "none",
-            }}
+
+        <Typography
+          variant="h5"
+          noWrap
+          component="a"
+          href="/"
+          sx={{
+            // mr: 2,
+            display: { xs: "flex", md: "flex" },
+            fontFamily: "monospace",
+            fontWeight: 700,
+            letterSpacing: ".3rem",
+            color: "white",
+            textDecoration: "none",
+          }}
+        >
+
+
+
+          Replace with SVG
+
+
+
+
+        </Typography>
+
+
+        <Box sx={{
+          padding: 1,
+          flexGrow: 1,
+          display: {
+            xs: "none",
+            md: "flex",
+            justifyContent: "flex-end"
+          }
+        }}>
+
+          <CustomButton
+            id='toUnderline'
+            key="about"
+            // onClick={() => {
+            //   ('clicked')
+            // }}
+            component={Link}
+            to="about"
+
+
+
           >
+            About Me
+          </CustomButton>
 
+          <CustomButton
+            id='toUnderline'
 
+            key="project"
+            // onClick={handleCloseNavMenu}
 
-            Replace with SVG
+            component={Link}
+            to="/projects"
+            variant="contained"
+          >
+            Projects
+          </CustomButton>
 
+          <CustomButton
+            id='toUnderline'
 
+            key="contact"
+            // onClick={handleCloseNavMenu}
 
+            component={Link}
+            to="/contact"
+            variant="contained"
+          >
+            Contact Me
+          </CustomButton>
 
-          </Typography>
-
-
-          <Box sx={{
-            padding: 1,
-            flexGrow: 1,
-            display: {
-              xs: "none",
-              md: "flex",
-              justifyContent: "flex-end"
-            }
-          }}>
-
-            <CustomButton
-              key="about"
-              // onClick={() => {
-              //   ('clicked')
-              // }}
-              component={Link}
-              to="about"
-
-
-
-            >
-              About Me
-            </CustomButton>
-
-            <CustomButton
-              key="project"
-              // onClick={handleCloseNavMenu}
-
-              component={Link}
-              to="/projects"
-              variant="contained"
-            >
-              Projects
-            </CustomButton>
-
-            <CustomButton
-              key="contact"
-              // onClick={handleCloseNavMenu}
-
-              component={Link}
-              to="/contact"
-              variant="contained"
-            >
-              Contact Me
-            </CustomButton>
-
-          </Box>
+        </Box>
 
 
         {/* </Toolbar> */}

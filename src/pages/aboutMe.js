@@ -1,12 +1,12 @@
 import React from 'react'
 import '../styles/aboutMe.css'
-// import ParticlesContainer from "./particles.js";
+import Carousel from '../components/Carousel';
 
 export default function About() {
   return (
     <div className='AboutContainer' id='about-section'>
       <main className="aboutme-header">
-        <h1 className="header">About Me</h1>
+        <h3 className="header">About Me</h3>
         <p className="aboutMeText">
           Full-stack web developer leveraging an array of transferable skills
           from former career. These skills include leadership, a strong teamwork
@@ -25,6 +25,8 @@ export default function About() {
           
         </p>
       </main>
+
+      {/* < Carousel /> */}
     </div>
   );
 }
