@@ -5,7 +5,7 @@ import About from './pages/aboutMe'
 import Contact from './pages/contactMe'
 import Projects from './pages/projects'
 import Navbar from "./components/navbar";
-import Footer from "./components/footer";
+import Footer from "./components/socials";
 import Home from "./pages/home";
 import './App.css'
 

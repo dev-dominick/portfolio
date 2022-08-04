@@ -1,20 +1,13 @@
-.MuiBottomNavigationAction-root.Mui-selected {
-    color: yellow !important;
+.footerContainer {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
 }
-/* 
-.Mui-selected {
-    color: yellow;
-} */
 
-/* .MuiBottomNavigationAction-root {
-    color: red;
-} */
-
-/* .MuiBottomNavigationAction-iconOnly{
-    color: red;
-} */
-
-/* .MuiBottomNavigationAction-label{
-    color: red;
-} */
-
+.footer {
+    color: white;
+    text-align: center;
+    cursor: default;
+}
