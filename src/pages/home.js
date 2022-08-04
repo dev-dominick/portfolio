@@ -4,7 +4,7 @@ import '../styles/home.css';
 import Navbar from '../components/navbar';
 import HomeIntro from '../components/homeIntro';
 import videoBG from '../Videos/videoBG.mp4'
-import ParticlesBG from '../components/Particles';
+import ParticlesContainer from '../components/Particles';
 
 export default function Home() {
 
@@ -12,7 +12,7 @@ export default function Home() {
     <div
      className="Home"
      >
-      {/* <ParticlesBG/> */}
+      <ParticlesContainer/>
         {/* <video className='video' src={videoBG} autoPlay muted loop /> */}
        
         < HomeIntro />
@@ -20,6 +20,7 @@ export default function Home() {
     </div>
   );
 }
+
 
 
 
