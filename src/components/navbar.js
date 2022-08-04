@@ -23,23 +23,27 @@ const color = {
 const CustomButton = styled(ButtonUnstyled)`
   font-family: monospace, sans-serif;
   font-weight: bold;
-  font-size: 0.875rem;
-  background-color: ${color[500]};
+  font-size: 1.5rem;
+  text-decoration: none;
+  // background-color: ${color[500]};
   border-radius: 8px;
   color: white;
   transition: all 150ms ease;
   cursor: pointer;
   border: none;
-  width: 10%;
   height: '10%';
   text-align: center;
   padding: 1rem;
-  margin: 2rem;
+  margin: .5rem;
+  white-space: nowrap;
+  justifyContent: flex-end;
+  // z-index: -1
 
 
 
   &:hover {
-    background-color: ${color[600]};
+    // background-color: ${color[600]};
+    text-decoration: underline;
   }
 
   &.${buttonUnstyledClasses.active} {
@@ -51,10 +55,10 @@ const CustomButton = styled(ButtonUnstyled)`
     outline: none;
   }
 
-  &.${buttonUnstyledClasses.disabled} {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
+  // &.${buttonUnstyledClasses.disabled} {
+  //   opacity: 0.5;
+  //   cursor: not-allowed;
+  // }
 `;
 
 
@@ -89,47 +93,69 @@ export default function Navbar() {
 
   return (
     // <div className="nav-container">
-      <AppBar
-        className="nav-container"
+    <AppBar
+      // className="nav-container"
+      sx={{
+        backgroundColor: scrolled ? "black !important" : "transparent !important"
+      }} >
+
+      <Container maxWidth="x1"
         sx={{
-          backgroundColor: scrolled ? "black !important" : "transparent !important"
-          // transparent
+          display: 'flex',
+          alignItems: 'center',
+          display: 'flex',
+          height: '10rem',
+          // border: '10px solid white',
+          
+
+        }}>
+
+        {/* <Toolbar 
+        sx={{
+
+          alignItems: 'center',
+          display: 'flex',
+          
+        }}> */}
+        
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              // mr: 2,
+              display: { xs: "flex", md: "flex" },
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: ".3rem",
+              color: "white",
+              textDecoration: "none",
+            }}
+          >
 
 
-        }} >
-        <Container maxWidth="x1">
-          <Toolbar >
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "white",
-                textDecoration: "none",
-              }}
-            >
-              Dominick Albano
-            </Typography>
+
+            Replace with SVG
 
 
-            <Box sx={{
-              padding: 1,
-              flexGrow: 1,
-              display: {
-                xs: "none",
-                md: "flex",
-                justifyContent: "flex-end"
-              }
-            }}>
 
-              <CustomButton
-                key="about"
+
+          </Typography>
+
+
+          <Box sx={{
+            padding: 1,
+            flexGrow: 1,
+            display: {
+              xs: "none",
+              md: "flex",
+              justifyContent: "flex-end"
+            }
+          }}>
+
+            <CustomButton
+              key="about"
               // onClick={() => {
               //   ('clicked')
               // }}
@@ -138,38 +164,38 @@ export default function Navbar() {
 
 
 
-              >
-                About Me
-              </CustomButton>
+            >
+              About Me
+            </CustomButton>
 
-              <CustomButton
-                key="project"
-                // onClick={handleCloseNavMenu}
+            <CustomButton
+              key="project"
+              // onClick={handleCloseNavMenu}
 
-                component={Link}
-                to="/projects"
-                variant="contained"
-              >
-                Projects
-              </CustomButton>
+              component={Link}
+              to="/projects"
+              variant="contained"
+            >
+              Projects
+            </CustomButton>
 
-              <CustomButton
-                key="contact"
-                // onClick={handleCloseNavMenu}
+            <CustomButton
+              key="contact"
+              // onClick={handleCloseNavMenu}
 
-                component={Link}
-                to="/contact"
-                variant="contained"
-              >
-                Contact me
-              </CustomButton>
+              component={Link}
+              to="/contact"
+              variant="contained"
+            >
+              Contact Me
+            </CustomButton>
 
-            </Box>
+          </Box>
 
 
-          </Toolbar>
-        </Container>
-      </AppBar>
+        {/* </Toolbar> */}
+      </Container>
+    </AppBar>
     // </div>
   );
 };

@@ -5,9 +5,11 @@
 .name {
     /* border: 1px solid blue; */
     margin-right: 300px;
+    font-family: monospace;
 }
 
 .title {
     /* border: 1px solid yellow; */
     margin-left: 220px;
+    font-family: monospace;
 }

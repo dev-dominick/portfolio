@@ -3,19 +3,25 @@ import React from 'react'
 import '../styles/home.css';
 import Navbar from '../components/navbar';
 import HomeIntro from '../components/homeIntro';
+import videoBG from '../Videos/videoBG.mp4'
+import ParticlesBG from '../components/Particles';
+
 export default function Home() {
 
   return (
-  // <div>
-  //   <Navbar/>
-    <div className="Home">
-      <header className="Home-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-
+    <div
+     className="Home"
+     >
+      {/* <ParticlesBG/> */}
+        {/* <video className='video' src={videoBG} autoPlay muted loop /> */}
+       
         < HomeIntro />
        
-      </header>
     </div>
-    // </div>
   );
 }
+
+
+
+    
+
