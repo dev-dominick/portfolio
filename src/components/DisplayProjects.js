@@ -74,53 +74,43 @@ export default function DisplayProjects() {
       languages: 'HTML/CSS/JS',
       background: '../../public/assets/planner.png'
     },
-    {
-      title: 'Daily Meal Planner',
-      languages: 'HTML/CSS/JS',
-      background: '../../public/assets/planner.png'
-    },
-    {
-      title: 'Daily Meal Planner',
-      languages: 'HTML/CSS/JS',
-      background: '../../public/assets/planner.png'
-    },
-    {
-      title: 'Daily Meal Planner',
-      languages: 'HTML/CSS/JS',
-      background: '../../public/assets/planner.png'
-    },
 
   ]
 
   return (
-    <div >
-      <div>
 
-        {projects.map(({ title, languages, background }) => (
+    <div class="section-area">
 
-          <div class="box-item" id="dailymealplannerPhoto">
-            <div className="project-name-text" onClick={handleOpen}>
+      {projects.map(({ title, languages, background }) => (
+
+        <div class="box-item" >
+
+          <div className="project-name-text" onClick={handleOpen}>
+            <div>
               {title}
             </div>
 
-            <div className='div-container'>
+            <div>
               {languages}
             </div>
-
-            <div>
-              {background}
-            </div>
-
-
-
-            
-
-            
           </div>
 
-        ))}
 
-      </div>
+
+          {/* <div>
+              {background}
+            </div> */}
+
+
+
+
+
+
+        </div>
+
+      ))}
+
+
 
 
 

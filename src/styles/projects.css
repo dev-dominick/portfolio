@@ -1,3 +1,7 @@
+h1 {
+  margin-top: 11rem;
+}
+
 .ProjectsContainer {
   background-color: purple;
   min-height: 100vh;
@@ -36,21 +40,27 @@
   max-height: 100%;
 }
 
-.div-container {
+/* .div-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
+} */
 
 .section-area {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
-  margin: 25px 0;
-  padding: 10px 0;
+  display: flex; 
+   flex-direction: column;
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+  /* align-items: stretch; */
+  /* margin: 25px 0;
+  padding: 10px 0; */
 }
+
+.section-area .box-item:nth-child(odd){
+  float: left;
+  margin-right: 4rem;
+}
+
 
 /* #dailymealplannerPhoto {
   background-image: url("../../public/assets/project-1-pic.png");

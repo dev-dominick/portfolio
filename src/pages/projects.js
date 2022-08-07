@@ -8,18 +8,13 @@ export default function Projects() {
     
     <div className='ProjectsContainer' id='project-section'>
 
-      <h1>projects</h1>
+      <h1>Projects</h1>
 
-      <section class="section-area" id="projects">
-
-        <div class="div-container">
+      
 
           < DisplayProjects />
 
-
-        </div>
-
-      </section>
+      
 
     </div>
   );
