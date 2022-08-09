@@ -116,7 +116,7 @@ export default function Navbar() {
           display: 'flex',
           alignItems: 'center',
           display: 'flex',
-          height: '10rem',
+          height: '5rem',
           // border: '10px solid white',
 
 
@@ -148,7 +148,7 @@ export default function Navbar() {
 
 
 
-          Replace with SVG
+          Dominick The Dev
 
 
 
