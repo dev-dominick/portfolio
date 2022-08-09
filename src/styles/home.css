@@ -7,18 +7,32 @@ html {
 
 
 .Home {
-  /* background: url('../Videos/video.mp4'); */
+  position: absolute;
+  top: 0;
   background-color: black;
   min-height: 100vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: red;
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* .video {
   width: 100%;

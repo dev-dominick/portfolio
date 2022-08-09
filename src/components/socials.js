@@ -9,15 +9,16 @@ import '../styles/socials.css'
 
 const styles = {
   footerStyle: {
-    position: 'fixed',
-    bottom: '0px',
-    width: '100%',
+    // position: 'fixed',
+    // bottom: '0px',
+    // width: '100%',
     backgroundColor: 'transparent',
     marginBottom: '1rem'
   },
   icon: {
     '& .MuiBottomNavigationAction-root': {
-      color: 'red'
+      color: 'red',
+      width: '1px'
     },
     "& .Mui-selected,  svg": {
       color: "white",
@@ -40,7 +41,7 @@ export default function Socials() {
   return (
     <BottomNavigation
       style={styles.footerStyle}
-      sx={{ width: 500, color: "white", display: 'flex', justifyContent: 'center' }}
+      // sx={{   display: 'flex', justifyContent: 'center' }}
       value={value}
       onChange={handleChange}
     >
