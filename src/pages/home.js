@@ -8,12 +8,12 @@ export default function Home() {
 
   return (
     <div
-     className="Home"
-     >
-      <ParticlesContainer/>
-       
-        < HomeIntro />
-       
+      className="Home"
+    >
+      <ParticlesContainer />
+
+      < HomeIntro />
+
     </div>
   );
 }
@@ -21,5 +21,5 @@ export default function Home() {
 
 
 
-    
+
 
