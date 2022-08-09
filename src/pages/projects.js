@@ -6,14 +6,12 @@ import DisplayProjects from "../components/DisplayProjects";
 export default function Projects() {
   return (
     
-    <div className='ProjectsContainer' id='project-section'>
+    <div className='ProjectsPageStyles' id='project-section'>
 
-      <h1>Projects</h1>
+<h1>Projects</h1>
 
       
-
-          < DisplayProjects />
-
+        < DisplayProjects />
       
 
     </div>

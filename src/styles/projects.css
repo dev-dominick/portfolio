@@ -2,34 +2,66 @@ h1 {
   margin-top: 11rem;
 }
 
-.ProjectsContainer {
-  background-color: purple;
+.ProjectsPageStyles {
+  position: absolute;
+  top: 0;
+  background-color: #86af49;
   min-height: 100vh;
   width: 100%;
+  font-size: calc(10px + 2vmin);
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+
 }
 
-.box-item {
-  border: 5px solid black;
+
+.project-section-area {
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw;
+  grid-auto-flow: row;
+  gap: 4rem;
+  justify-items: center;
+  align-items: center;
+  margin: 5rem 0 5rem 0;
+  
+}
+
+
+.project-container {
+  display: flex;
+  /* flex:  1 0 30%; */
+  /* flex-grow: 3; */
+  flex-direction: column;
+  width: 100%;
+  min-height: 20rem;
+  /* margin: 5px; */
+  /* flex-basis: calc(30%); */
+  /* align-items: center; */
+}
+
+
+
+.project-picture {
+  border: 1px solid white;
   background-color: rgb(40, 40, 51);
   color: white;
-  min-height: 150px;
+  min-height: 15rem;
   max-height: 150px;
-  flex-basis: calc(30%);
-  align-items: center;
-  padding: 0 0 20px 0;
-  margin: 0.5em;
-  text-decoration: none;
-  background-blend-mode: soft-light;
-  background-size: 150%;
-  transition: all 0.5s;
-  font-size: 0.9rem;
-  border-radius: 3rem;
+  width: 100%; 
+  border-radius: 1rem;
+  /* flex-basis: calc(30%); */
+  /* align-items: center; */
+  /* padding: 0 0 20px 0; */
+  /* margin: 0.5em; */
+  /* text-decoration: none; */
+  /* background-blend-mode: soft-light; */
+  /* background-size: 150%; */
+  /* transition: all 0.5s; */
+  /* font-size: 0.9rem; */
+  /* border-radius: 3rem; */
 }
 
 .project-name-text {
@@ -40,54 +72,35 @@ h1 {
   max-height: 100%;
 }
 
+.description-container {
+  background-color: tan;
+  border: 1px solid white;
+  border-radius: 1rem;
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  min-height: 8rem;
+  /* height: 8rem; */
+  /* min-height: 100%; */
+  /* max-height: 100%; */
+}
+
 /* .div-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 } */
 
-.section-area {
-  display: flex; 
-   flex-direction: column;
-  /* flex-wrap: wrap; */
-  /* justify-content: space-between; */
-  /* align-items: stretch; */
-  /* margin: 25px 0;
-  padding: 10px 0; */
+
+
+/* .section-area .project-container:nth-child(odd){
+ 
 }
 
-.section-area .box-item:nth-child(odd){
-  float: left;
-  margin-right: 4rem;
-}
-
-
-/* #dailymealplannerPhoto {
-  background-image: url("../../public/assets/project-1-pic.png");
-  background-position: center center;
-  background-size: cover;
-}
-
-#workdayplannerPhoto {
-  background-image: url("../../public/assets/planner.png");
-  background-position: center center;
-  background-size: cover;
-}
-
-#passwordgeneratorPhoto {
-  background-image: url("../../public/assets/password-generator.png");
-  background-position: center center;
-  background-size: cover;
-}
-
-#codequizPhoto {
-  background-image: url("../../public/assets/code-quiz.png");
-  background-position: center center;
-  background-size: cover;
-}
-
-#notepadPhoto {
-  background-image: url("../../public/assets/note-pad.png");
-  background-position: center center;
-  background-size: cover;
+.testing .project-container:nth-child(even) {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
 } */
+

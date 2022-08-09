@@ -40,56 +40,71 @@ export default function DisplayProjects() {
 
   let projects = [
     {
-      title: 'Daily Meal Planner',
+      title: '1',
       languages: 'HTML/CSS/JS',
-      background: '../../public/assets/planner.png'
+      description: 'insert description here'
     },
     {
-      title: 'Notepad',
+      title: '2',
       languages: 'HTML/CSS/JS',
-      background: 'dksafjkasjd;fl',
+      description: 'dksafjkasjd;fl',
     },
     {
-      title: 'Daily Meal Planner',
+      title: '3',
       languages: 'HTML/CSS/JS',
-      background: '../../public/assets/planner.png'
+      description: 'insert description here'
     },
     {
-      title: 'Daily Meal Planner',
+      title: '4',
       languages: 'HTML/CSS/JS',
-      background: '../../public/assets/planner.png'
+      description: 'insert description here'
     },
     {
-      title: 'Daily Meal Planner',
+      title: '5',
       languages: 'HTML/CSS/JS',
-      background: '../../public/assets/planner.png'
+      description: 'insert description here'
     },
     {
-      title: 'Daily Meal Planner',
+      title: '6',
       languages: 'HTML/CSS/JS',
-      background: '../../public/assets/planner.png'
+      description: 'insert description here'
     },
     {
-      title: 'Daily Meal Planner',
+      title: '7',
       languages: 'HTML/CSS/JS',
-      background: '../../public/assets/planner.png'
+      description: 'insert description here'
+    },
+    {
+      title: '8',
+      languages: 'HTML/CSS/JS',
+      description: 'insert description here'
     },
 
   ]
 
   return (
 
-    <div class="section-area">
 
-      {projects.map(({ title, languages, background }) => (
 
-        <div class="box-item" >
+    <div class="project-section-area">
 
-          <div className="project-name-text" onClick={handleOpen}>
-            <div>
+
+      {projects.map(({ title, languages, description }) => (
+
+        <div className='project-container'>
+
+
+          <div className=" project-picture" onClick={handleOpen}>
+            picture here
+          </div>
+
+          <div className='description-container'>
+            <h3>
               {title}
-            </div>
-
+            </h3>
+            <p>
+              {description}
+            </p>
             <div>
               {languages}
             </div>
@@ -97,17 +112,8 @@ export default function DisplayProjects() {
 
 
 
-          {/* <div>
-              {background}
-            </div> */}
-
-
-
-
-
 
         </div>
-
       ))}
 
 
