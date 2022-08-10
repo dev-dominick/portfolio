@@ -40,7 +40,7 @@ export default function DisplayProjects() {
 
   let projects = [
     {
-      title: '1',
+      title: 'Daily Meal Planner',
       languages: 'HTML/CSS/JS',
       description: 'insert description here'
     },
