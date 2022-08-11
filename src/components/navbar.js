@@ -15,7 +15,7 @@ import About from "../pages/aboutMe";
 
 
 const color = {
-  500: '#82b74b',
+  yellow: '#eeff04',
   600: '#c94c4c',
   700: '#4040a1',
 };
@@ -44,11 +44,13 @@ const CustomButton = styled(ButtonUnstyled)`
   &:hover {
     // background-color: ${color[600]};
     text-decoration: underline;
+    text-decoration-color: #eeff04;
   }
 
   &.${buttonUnstyledClasses.active} {
     // background-color: ${color[700]},
     text-decoration: underline;
+    
   }
 
   &.${buttonUnstyledClasses.selected} {
@@ -115,7 +117,7 @@ export default function Navbar() {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          display: 'flex',
+          // display: 'flex',
           height: '5rem',
           // border: '10px solid white',
 
