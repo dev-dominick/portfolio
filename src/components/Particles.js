@@ -32,7 +32,7 @@ export default function ParticlesContainer() {
                         }
                     },
                     "color": {
-                        "value": "#537d5d"
+                        "value": "#eeff04"
                     },
                     "shape": {
                         "type": "circle",
