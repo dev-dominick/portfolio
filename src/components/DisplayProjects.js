@@ -69,10 +69,19 @@ export default function DisplayProjects() {
 
 
         <div className='project-container'>
-          <div className="project-picture">
-            <img id='src' src={require('../assets/' + src)} alt={alt} />
+
+
+          <div className="project-picture view-first">
+            <img id='src' src={('/assets-copy/' + src)} alt={alt} />
+            <div className='mask'>
+            <h4>{ title }</h4>
+            <p>{ description }</p>
+              <a href='#' className='info'>read more</a>
+            </div>
           </div>
-          <div className='description-container'>
+
+
+          {/* <div className='description-container'>
             <h3>
               {title}
             </h3>
@@ -82,7 +91,7 @@ export default function DisplayProjects() {
             <div>
               {languages}
             </div>
-          </div>
+          </div> */}
         </div>
       ))}
     </div>

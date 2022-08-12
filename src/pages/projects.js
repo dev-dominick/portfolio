@@ -8,7 +8,7 @@ export default function Projects() {
     
     <div className='ProjectsPageStyles' id='project-section'>
 
-      <h1>Projects</h1>
+      <h1>My Work</h1>
       <p>Here are a few cool projects I have built!</p>
 
       
