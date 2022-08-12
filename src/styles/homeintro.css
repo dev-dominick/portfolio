@@ -1,23 +1,28 @@
 .homeIntroContainer {
-    text-align: center;
-    align-items: center;
-
+    display: flex;
+    flex-direction: column ;
+    margin: auto;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
 }
 
 .name {
-    /* border: 1px solid blue; */
-    margin-right: 300px;
-    font-family: monospace;
+  /* border: 1px solid blue; */
+  /* margin-right: 300px; */
+  font-family: monospace;
+  z-index: 1;
 }
 
 .title {
-    /* border: 1px solid yellow; */
-    margin-left: 220px;
-    font-family: monospace;
+  /* border: 1px solid yellow; */
+  /* margin-left: 220px; */
+  font-family: monospace;
+  z-index: 1;
 }
 
 .socials {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10rem;
-  }
+  /* display: flex; */
+  /* justify-content: space-around; */
+  /* margin-top: 10rem; */
+}

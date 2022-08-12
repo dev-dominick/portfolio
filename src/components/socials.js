@@ -13,7 +13,7 @@ const styles = {
     // bottom: '0px',
     // width: '100%',
     backgroundColor: 'transparent',
-    marginBottom: '1rem'
+    // marginBottom: '1rem'
   },
   icon: {
     '& .MuiBottomNavigationAction-root': {
