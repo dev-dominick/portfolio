@@ -9,7 +9,9 @@ export default function DisplayProjects() {
       languages: 'HTML/CSS/JS',
       description: 'insert description here',
       src: 'DailyMealPlanner.png',
-      alt: 'Pic of project'
+      alt: 'Pic of project',
+      repo: 'https://github.com/dev-dominick/daily-meal-planner',
+      site: 'https://dev-dominick.github.io/daily-meal-planner/'
     },
     {
       title: 'Code Quiz',
@@ -65,7 +67,7 @@ export default function DisplayProjects() {
     <div class="project-section-area">
 
 
-      {projects.map(({ title, languages, description, src, alt }) => (
+      {projects.map(({ title, languages, description, src, alt, repo, site }) => (
 
 
         <div className='project-container'>
@@ -73,10 +75,16 @@ export default function DisplayProjects() {
 
           <div className="project-picture view-first">
             <img id='src' src={('/assets-copy/' + src)} alt={alt} />
+            <a href={`${ repo }`}>
+              <img className='githubMark' src={require('../assets/github-64-dark.png')} alt={"GitHub"}></img>
+            </a>
+            <a href={`${ site }`}>
+              <img className='livesiteMark' src={require('../assets/livesite.png')} alt={"Live Site"}></img>
+            </a>
             <div className='mask'>
             <h4>{ title }</h4>
-            <p>{ description }</p>
-              <a href='#' className='info'>read more</a>
+            {/* <p>{ description }</p>
+              <a href='#' className='info'>read more</a> */}
             </div>
           </div>
 
