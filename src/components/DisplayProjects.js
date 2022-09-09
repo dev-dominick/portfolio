@@ -7,7 +7,7 @@ export default function DisplayProjects() {
     {
       title: 'Daily Meal Planner',
       languages: 'HTML/CSS/JS',
-      description: 'insert description here',
+      description: 'Easy way to plan healthier meals',
       src: 'DailyMealPlanner.png',
       alt: 'Pic of project',
       repo: 'https://github.com/dev-dominick/daily-meal-planner',
@@ -16,30 +16,38 @@ export default function DisplayProjects() {
     {
       title: 'Code Quiz',
       languages: 'HTML/CSS/JS',
-      description: 'dksafjkasjd;fl',
+      description: 'Test your knowledge on development topics',
       src: 'code-quiz.png',
-      alt: 'Pic of project'
+      alt: 'Pic of project',
+      repo: 'https://github.com/dev-dominick/code-quiz',
+      site: 'https://dev-dominick.github.io/code-quiz/'
     },
     {
       title: 'Note Pad',
       languages: 'HTML/CSS/JS',
-      description: 'insert description here',
+      description: 'Jot your notes down with my note tracking app',
       src: 'note-pad.png',
-      alt: 'Pic of project'
+      alt: 'Pic of project',
+      repo: 'https://github.com/dev-dominick/note-pad',
+      site: 'https://arcane-citadel-42917.herokuapp.com/notes'
     },
     {
       title: 'Password Generator',
       languages: 'HTML/CSS/JS',
-      description: 'insert description here',
+      description: 'Create a unique and secure password with my password generator',
       src: 'password-generator.png',
-      alt: 'Pic of project'
+      alt: 'Pic of project',
+      repo: 'https://github.com/dev-dominick/password-generator',
+      site: 'https://dev-dominick.github.io/password-generator/'
     },
     {
       title: 'Workday Planner',
       languages: 'HTML/CSS/JS',
-      description: 'insert description here',
+      description: 'A simple way to track your tasks for the day',
       src: 'planner.png',
-      alt: 'Pic of project'
+      alt: 'Pic of project',
+      repo: 'https://github.com/dev-dominick/work-day-planner',
+      site: 'https://dev-dominick.github.io/work-day-planner/'
     },
     // {
     //   title: '6',
@@ -83,8 +91,8 @@ export default function DisplayProjects() {
             </a>
             <div className='mask'>
             <h4>{ title }</h4>
-            {/* <p>{ description }</p>
-              <a href='#' className='info'>read more</a> */}
+            <p>{ description }</p>
+              {/* <a href='#' className='info'>read more</a> */}
             </div>
           </div>
 
