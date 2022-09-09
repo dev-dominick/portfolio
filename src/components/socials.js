@@ -23,9 +23,10 @@ const styles = {
     "& .Mui-selected,  svg": {
       color: "white",
       showLabel: 'false'
-    
-       }} 
+
+    }
   }
+}
 
 
 
