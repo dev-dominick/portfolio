@@ -24,9 +24,9 @@
 }
 
 .aboutMeText {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   border-radius: 15px;
-  background-color: black;
+  /* background-color: black; */
   text-align: center;
   padding: 1rem;
   top: 35%;

@@ -1,12 +1,14 @@
 import React from 'react'
 import '../styles/aboutMe.css'
-import Carousel from '../components/Carousel';
+// import Carousel from '../components/Carousel';
 
 export default function About() {
   return (
     <div className='AboutContainer' id='about-section'>
       <main className="aboutme-header">
+
         <h3 className="header">About Me</h3>
+
         <p className="aboutMeText">
           Full-stack web developer leveraging an array of transferable skills
           from former career. These skills include leadership, a strong teamwork
@@ -22,8 +24,8 @@ export default function About() {
           similar to agile development, in many of my projects. Excited to learn
           new technologies and implement them into future personal and
           open-source projects.
-          
         </p>
+        
       </main>
 
       {/* < Carousel /> */}
