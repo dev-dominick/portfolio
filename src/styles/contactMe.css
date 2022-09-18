@@ -1,11 +1,10 @@
 .ContactPageStyles {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* flex-direction: column; */
-  /* text-align: center; */
-  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
   background-color: #242424;
-  /* box-shadow: inset 0 0 50px black; */
   min-height: 100vh;
   width: 100%;
   font-size: calc(10px + 2vmin);
@@ -14,23 +13,11 @@
   top: 0;
 }
 
-.pageHeader {
-  display: flex;
-  margin-top: 8%;
-  justify-content: center;
-}
-
 .formBox {
-  margin: auto;
-  width: 50%;
-  /* border: 1px solid white; */
+  width: 55%;
   display: flex;
   flex-direction: column;
-  padding: 5rem;
-  /* display: block; */
-  /* margin-top: 5px; */
-  /* margin-bottom: 5px; */
-  /* width: 100%; */
+  padding: 4rem;
 }
 
 .inputRow {
@@ -55,10 +42,10 @@
 
 .emailBox {
   font-family: monospace;
-
   box-sizing: border-box;
   background-color: white;
   width: 50%;
+  height: 4rem;
   border-radius: 1rem;
   padding-left: 20px;
 }
@@ -70,35 +57,58 @@
   box-sizing: border-box;
   background-color: white;
   border-radius: 1rem;
-
-  /* border: 2px solid #ccc; */
-  /* border-radius: 4px; */
   resize: none;
-}
-
-/* ::placeholder {
-  text-align: ;
-} */
-
-#btnContainer {
-  display: flex;
-  justify-content: center;
 }
 
 .submitBtn {
   font-family: monospace;
   font-size: 1rem;
   font-weight: bold;
-  display: flex;
   background-color: white;
-  border: none;
   color: black;
   padding: 16px 32px;
-  /* text-decoration: none; */
-  margin: 4px 2px;
-  cursor: pointer;
-  width: 15%;
-  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 20%;
+  min-height: 10%;
   border-radius: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  cursor: pointer;
 }
+
+@media screen and (max-width: 1400px) {
+  .formBox {
+    min-width: 75%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .pageHeader {
+    padding: 1rem 0 1rem 0;
+  }
+
+  .formBox {
+    width: 75%;
+    padding: 3rem 0 0 0;
+  }
+
+  .inputRow {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .nameBox {
+    width: 100%;
+  }
+
+  .emailBox {
+    width: 100%
+  }
+
+  .submitBtn {
+    min-width: 35%;
+    margin-top: 2rem;
+  }
+}
+
+
