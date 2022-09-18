@@ -8,6 +8,7 @@
   /* text-align: center; */
   align-items: center;
   z-index: 1;
+  gap: 3rem;
   /* border: 1px solid red; */
 }
 
@@ -38,3 +39,39 @@
   /* margin-top: 10rem; */
   /* border: 1px solid green; */
 }
+
+@media screen and (max-width: 856px) {
+  .homeIntroContainer {
+    /* margin-top: 50vh; */
+    
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    /* justify-content: center; */
+    /* text-align: center; */
+    align-items: center;
+    z-index: 1;
+    /* border: 1px solid red; */
+  }
+
+  .socialsContainer {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .homeIntroContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    z-index: 1;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .socialsContainer {
+    margin-top: 2rem;
+  }
+}
+

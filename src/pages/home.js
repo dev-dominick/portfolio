@@ -3,7 +3,7 @@ import React from 'react'
 import '../styles/home.css';
 import HomeIntro from '../components/homeIntro';
 import ParticlesContainer from '../components/Particles';
-
+import Footer from '../components/footer';
 export default function Home() {
 
   return (
@@ -13,6 +13,7 @@ export default function Home() {
       <ParticlesContainer />
 
       < HomeIntro />
+      < Footer />
 
     </div>
   );
