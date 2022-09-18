@@ -52,8 +52,6 @@ export default function ContactForm() {
                     placeholder="Full Name"
                 />
 
-                {/* <label>Email</label> */}
-
                 <input
                     type="email"
                     name="user_email"
@@ -64,8 +62,6 @@ export default function ContactForm() {
                 />
             </div>
             
-            {/* <label>Message</label> */}
-
             <textarea
                 type="text"
                 name="message"
@@ -75,9 +71,7 @@ export default function ContactForm() {
                 placeholder="Message"
             />
 
-            <div id='btnContainer'>
-                <input className='submitBtn' type="submit" value="Send" />
-            </div>
+            <input className='submitBtn' type="submit" value="Send Message" />
 
             {/* {errorMessage && (
                 <div>
