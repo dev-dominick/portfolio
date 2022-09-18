@@ -1,220 +1,324 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import ButtonUnstyled from "@mui/base/ButtonUnstyled";
+import { styled } from "@mui/system";
 import "../styles/navbar.css";
-import ButtonUnstyled, { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
-import { styled } from '@mui/system';
 
-import About from "../pages/aboutMe";
+const NavButton = styled(ButtonUnstyled)({
+  boxShadow: 'none',
+  fontFamily: 'monospace, sans-serif',
+  fontWeight: 'bold',
+  // fontSize: { xs: "", sm: "", md: "'1rem'", lg: "'1.5rem'", xl: "'3rem'", },
+  fontSize: '1.2rem',
+  textDecoration: 'none',
+  color: 'white',
+  transition: 'all 150ms ease',
+  cursor: 'pointer',
+  padding: '.5rem 0.5rem 0.5rem 0.5rem',
+  margin: '0.9rem 1.5rem 2rem 1.5rem',
 
+  '&:hover': {
+    backgroundColor: '#eeff04',
+    color: 'black',
+  },
 
+  '&:active': {
+    backgroundColor: '#eeff04',
+    boxShadow: 'inset 0 0 13px 3px black!important',
+    color: 'black',
 
-const color = {
-  yellow: '#eeff04',
-  600: '#c94c4c',
-  700: '#4040a1',
+  },
+
+  '&:active:hover': {
+    backgroundColor: '#eeff04',
+    boxShadow: 'inset 0 0 13px 3px black!important',
+    color: 'black',
+  },
+});
+
+const FullScreenHeaderSx = {
+  margin: '.9rem 1.5rem 2rem 1.5rem',
+  padding: '.5rem 0.5rem 0.5rem 0.5rem',
+  display: { xs: "none", sm: "none", md: "flex", lg: "flex", xl: "flex", },
+  paddingLeft: { sm: "none", md: "1rem", lg: "5rem", xl: "8rem" },
+  fontFamily: "monospace",
+  fontSize: '2rem',
+  fontWeight: 700,
+  letterSpacing: ".3rem",
+  color: "white",
+  textDecoration: 'none',
+  // flexFlow: { xs: "", sm: "", md: "row nowrap", lg: "row nowrap", xl: "row nowrap", },
+  // alignItems: { xs: "", sm: "", md: "center", lg: "center", xl: "center", },
+  // height: { xs: "", sm: "", md: "5rem", lg: "5rem", xl: "5rem", },
+  // justifyContent: { xs: "", sm: "", md: "flex-end", lg: "flex-end", xl: "flex-end", },
+  '&:hover': {
+    textDecoration: 'underline',
+    textDecorationColor: '#eeff04'
+  }
 };
 
-const CustomButton = styled(ButtonUnstyled)`
-  font-family: monospace, sans-serif;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-decoration: none;
-  // background-color: ${color[500]};
-  border-radius: 8px;
-  color: white;
-  transition: all 150ms ease;
-  cursor: pointer;
-  border: none;
-  height: '10%';
-  text-align: center;
-  padding: 1rem;
-  margin: .5rem;
-  white-space: nowrap;
-  justifyContent: flex-end;
-  // z-index: -1
-
-
-
-  &:hover {
-    // background-color: ${color[600]};
-    text-decoration: underline;
-    text-decoration-color: #eeff04;
-  }
-
-  &.${buttonUnstyledClasses.active} {
-    // background-color: ${color[700]},
-    text-decoration: underline;
-    
-  }
-
-  &.${buttonUnstyledClasses.selected} {
-    // background-color: ${color[700]},
-    text-decoration: underline;
-  }
-
-  &.${buttonUnstyledClasses.focusVisible} {
-    box-shadow: 0 4px 20px 0 rgba(61, 71, 82, 0.1), 0 0 0 5px rgba(0, 127, 255, 0.5);
-    outline: none;
-  }
-
- 
-`;
-
-
 export default function Navbar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  // const [, setAnchorElUser] = React.useState(null);
   const [scrolled, setScrolled] = React.useState(false);
-  const [clicked, setClicked] = React.useState(false);
+  const location = useLocation();
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
 
-  // React.useEffect(() => {
-  //   let underline = document.getElementById('toUnderline');
-  //   if () {
+  React.useEffect(() => {
+    let page = location.pathname;
+    console.log(page);
+    let pageName = "https://dominickthedev.com" + page;
+    const id = document.getElementsByClassName("toUnderline");
+    console.log(id);
+    for (let i = 0; i < id.length; i++) {
+      if (pageName === id[i].href) {
 
-  //   }
-  // })
+        id[i].style.boxShadow = '0 0 0 0.2rem rgba(238,255,4)';
+
+        // id[i].style.textDecoration = "underline";
+        // id[i].style.textDecorationColor = "#eeff04";
+      } else {
+
+        id[i].style.boxShadow = '0 0 0 0 transparent';
+
+        // id[i].style.textDecoration = "underline";
+        // id[i].style.textDecorationColor = "transparent";
+
+      }
+    }
+  });
 
   React.useEffect(() => {
     console.log(scrolled);
     if (typeof window !== "undefined") {
       window.onscroll = () => {
         let currentScrollPos = window.pageYOffset;
-        // let maxScroll = document.body.scrollHeight - window.innerHeight;
-        // console.log(maxScroll)
         console.log(currentScrollPos);
         if (currentScrollPos === 0) {
           setScrolled(false);
-
-          // console.log(currentScrollPos)
         } else {
           setScrolled(true);
         }
       };
     }
-  })
-
-
-
-
-
+  });
 
   return (
-    // <div className="nav-container">
     <AppBar
-      // className="nav-container"
       sx={{
-        backgroundColor: scrolled ? "black !important" : "transparent !important"
-      }} >
-
-      <Container maxWidth="x1"
+        backgroundColor: scrolled
+          ? "#242424 !important"
+          : "transparent !important",
+        boxShadow: scrolled ? "black !important" : "none !important",
+      }}
+    >
+      <Container
+        maxWidth="x1"
         sx={{
-          display: 'flex',
-          alignItems: 'center',
-          // display: 'flex',
-          height: '5rem',
-          // border: '10px solid white',
+          padding: "1rem",
+          // display: { xs: "", sm: "", md: "flex", lg: "flex", xl: "flex", },
+          // alignContent: { xs: "", sm: "", md: "center", lg: "center", xl: "center", },
+          // alignItems: { xs: "", sm: "", md: "center", lg: "center", xl: "center", },
+          // flexFlow: { xs: "", sm: "", md: "row nowrap", lg: "row nowrap", xl: "row nowrap", },
+          // height: { xs: "", sm: "", md: "5rem", lg: "5rem", xl: "5rem", },
+          // justifyContent: { xs: "", sm: "", md: "center", lg: "center", xl: "center", },
 
-
-        }}>
-
-        {/* <Toolbar 
-        sx={{
-
-          alignItems: 'center',
-          display: 'flex',
-          
-        }}> */}
-
-        <Typography
-          variant="h5"
-          noWrap
-          component="a"
-          href="/"
+        }}
+      >
+        <Toolbar
+          // disableGutters
           sx={{
-            // mr: 2,
-            display: { xs: "flex", md: "flex" },
-            fontFamily: "monospace",
-            fontWeight: 700,
-            letterSpacing: ".3rem",
-            color: "white",
-            textDecoration: "none",
-          }}
-        >
+            display: { xs: "flex", sm: "flex", md: "flex", lg: "flex", xl: "flex" },
+            flexDirection: { xs: "row-reverse", sm: "row-reverse", md: "row", lg: "row", xl: "row" },
+          }} >
 
-
-
-          Dominick The Dev
-
-
-
-
-        </Typography>
-
-
-        <Box sx={{
-          padding: 1,
-          flexGrow: 1,
-          display: {
-            xs: "none",
-            md: "flex",
-            justifyContent: "flex-end"
-          }
-        }}>
-
-          <CustomButton
-            id='toUnderline'
-            key="about"
-            // onClick={() => {
-            //   ('clicked')
+          {/* Menu Icon for mobile */}
+          <Box sx={{
+            flexGrow: 1,
+            display: { xs: "flex", sm: "flex", md: "none" },
+            flexDirection: { xs: 'row-reverse', sm: 'row-reverse' }
+          }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+            //   sx={{display: 'flex',
             // }}
-            component={Link}
-            to="about"
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: "block", md: "none" },
+              }}
 
+            >
 
+              {/* mobile page menu buttons */}
+              <MenuItem
+                sx={{
+                  font: 'monospace',
+                  backgroundColor: "black",
+                  color: "white",
+                  textAlign: 'center !important'
 
+                }}
+                key="about"
+                onClick={handleCloseNavMenu}
+                component={Link}
+                to="/about"
+              >
+                <Typography textAlign="center">About</Typography>
+              </MenuItem>
+              <MenuItem
+                sx={{
+                  font: 'monospace',
+                  backgroundColor: "black",
+                  color: "white",
+                  textAlign: 'center !important'
+
+                }}
+                key="projects"
+                onClick={handleCloseNavMenu}
+                component={Link}
+                to="/projects"
+              >
+                <Typography textAlign="center">Projects</Typography>
+              </MenuItem>
+              <MenuItem
+                sx={{
+                  font: 'monospace',
+                  backgroundColor: "black",
+                  color: "white",
+                  textAlign: 'center !important'
+
+                }}
+                key="contact"
+                onClick={handleCloseNavMenu}
+                component={Link}
+                to="/contact"
+              >
+                <Typography textAlign="center">Contact</Typography>
+              </MenuItem>
+
+            </Menu>
+          </Box>
+
+          {/* header for full screen: Dominick The Dev */}
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href="/"
+            sx={FullScreenHeaderSx}
           >
-            About Me
-          </CustomButton>
+            Dominick The Dev
+          </Typography>
 
-          <CustomButton
-            id='toUnderline'
-
-            key="project"
-            // onClick={handleCloseNavMenu}
-
-            component={Link}
-            to="/projects"
-            variant="contained"
+          {/* mobile header: Dev Dominick */}
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 5,
+              display: { xs: "flex", md: "none" },
+              flexGrow: 1,
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
+            }}
           >
-            Projects
-          </CustomButton>
+            Dev Dominick
+          </Typography>
 
-          <CustomButton
-            id='toUnderline'
-
-            key="contact"
-            // onClick={handleCloseNavMenu}
-
-            component={Link}
-            to="/contact"
-            variant="contained"
+          {/* buttons for full screen */}
+          <Box
+            sx={{
+              padding: 1,
+              flexGrow: 1,
+              display: { xs: "none", sm: "none", md: "flex", lg: "flex", xl: "flex", },
+              paddingRight: { sm: "none", md: "1rem", lg: "5rem", xl: "8rem" },
+              // flexFlow: { xs: "", sm: "", md: "row nowrap", lg: "row nowrap", xl: "row nowrap", },
+              // alignItems: { xs: "", sm: "", md: "center", lg: "center", xl: "center", },
+              // height: { xs: "", sm: "", md: "5rem", lg: "5rem", xl: "5rem", },
+              justifyContent: { xs: "", sm: "", md: "flex-end", lg: "flex-end", xl: "flex-end", },
+            }}
           >
-            Contact Me
-          </CustomButton>
 
-        </Box>
+            {/* About Me Button */}
+            <NavButton
+              className="toUnderline"
+              key="about"
+              component={Link}
+              to="about"
+            >
+              About Me
+            </NavButton>
 
+            {/* Projects Button */}
+            <NavButton
+              className="toUnderline"
+              key="project"
+              component={Link}
+              to="/projects"
+              variant="contained"
+            >
+              Projects
+            </NavButton>
 
-        {/* </Toolbar> */}
+            {/* Contact Me Button */}
+            <NavButton
+              className="toUnderline"
+              key="contact"
+              component={Link}
+              to="/contact"
+              variant="contained"
+            >
+              Contact Me
+            </NavButton>
+
+          </Box>
+
+        </Toolbar>
+
       </Container>
+
     </AppBar>
-    // </div>
   );
-};
+}

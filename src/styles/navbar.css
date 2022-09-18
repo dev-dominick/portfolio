@@ -2,11 +2,16 @@
   position: fixed;
 }
 
-.navbar {
-  text-align: center;
-  
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+  background-color: grey !important;
+  height: 14rem !important;
+  width: 20rem !important;
+  text-align: center !important;
 }
 
-/* possibly changed / remove box shadow props */
+.css-dacy4n-MuiButtonBase-root-MuiMenuItem-root {
+  justify-content: center !important;
+  margin: 1rem 2rem 1rem 1rem !important;
+}
 
 
