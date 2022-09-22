@@ -3,15 +3,12 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import Container from "@mui/material/Container";
 import { Link, useLocation } from "react-router-dom";
 import ButtonUnstyled from "@mui/base/ButtonUnstyled";
 import { styled } from "@mui/system";
 import "../styles/navbar.css";
+import NavDrawer from "./Drawer";
 
 const NavButton = styled(ButtonUnstyled)({
   boxShadow: 'none',
@@ -69,15 +66,8 @@ const FullScreenHeaderSx = {
 export default function Navbar() {
   const [scrolled, setScrolled] = React.useState(false);
   const location = useLocation();
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
 
 
   React.useEffect(() => {
@@ -148,93 +138,17 @@ export default function Navbar() {
             flexDirection: { xs: "row-reverse", sm: "row-reverse", md: "row", lg: "row", xl: "row" },
           }} >
 
+
+
+
+
           {/* Menu Icon for mobile */}
-          <Box sx={{
-            flexGrow: 1,
-            display: { xs: "flex", sm: "flex", md: "none" },
-            flexDirection: { xs: 'row-reverse', sm: 'row-reverse' }
-          }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-            //   sx={{display: 'flex',
-            // }}
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
+          < NavDrawer />
 
-            >
 
-              {/* mobile page menu buttons */}
-              <MenuItem
-                sx={{
-                  font: 'monospace',
-                  backgroundColor: "black",
-                  color: "white",
-                  textAlign: 'center !important'
 
-                }}
-                key="about"
-                onClick={handleCloseNavMenu}
-                component={Link}
-                to="/about"
-              >
-                <Typography textAlign="center">About</Typography>
-              </MenuItem>
-              <MenuItem
-                sx={{
-                  font: 'monospace',
-                  backgroundColor: "black",
-                  color: "white",
-                  textAlign: 'center !important'
 
-                }}
-                key="projects"
-                onClick={handleCloseNavMenu}
-                component={Link}
-                to="/projects"
-              >
-                <Typography textAlign="center">Projects</Typography>
-              </MenuItem>
-              <MenuItem
-                sx={{
-                  font: 'monospace',
-                  backgroundColor: "black",
-                  color: "white",
-                  textAlign: 'center !important'
 
-                }}
-                key="contact"
-                onClick={handleCloseNavMenu}
-                component={Link}
-                to="/contact"
-              >
-                <Typography textAlign="center">Contact</Typography>
-              </MenuItem>
-
-            </Menu>
-          </Box>
 
           {/* header for full screen: Dominick The Dev */}
           <Typography
