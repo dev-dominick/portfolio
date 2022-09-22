@@ -11,7 +11,6 @@
   color: white;
   position: absolute;
   top: 0;
-
 }
 
 .workHeader {
@@ -170,15 +169,24 @@
   background-position: center;
 }
 
-
-
 @media screen and (max-width: 1000px) {
   .project-section-area {
     grid-template-columns: 75vw;
+    gap: 6rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .workHeader {
+    padding-top: 4rem;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .workHeader {
+    padding-top: 4rem;
+  }
+
   .headerInfo {
     margin-right: 8rem;
     margin-left: 8rem;
@@ -194,6 +202,10 @@
 }
 
 @media screen and (max-width: 550px) {
+  .workHeader {
+    padding-top: 5rem;
+  }
+
   .headerInfo {
     margin-right: 4rem;
     margin-left: 4rem;

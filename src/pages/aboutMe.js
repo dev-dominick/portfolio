@@ -30,11 +30,9 @@ export default function About() {
         </div>
       </div>
 
-
-
-      < Footer />
-
-      {/* < Carousel /> */}
+      <div className='footerContainer'>
+        < Footer />
+      </div>
     </div>
   );
 }

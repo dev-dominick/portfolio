@@ -77,6 +77,10 @@
 }
 
 @media screen and (max-width: 1400px) {
+  .pageHeader {
+    margin-top: 10rem;
+  }
+
   .formBox {
     min-width: 75%;
   }
@@ -84,7 +88,7 @@
 
 @media screen and (max-width: 900px) {
   .pageHeader {
-    padding: 1rem 0 1rem 0;
+    margin-top: 2rem;
   }
 
   .formBox {
@@ -102,7 +106,7 @@
   }
 
   .emailBox {
-    width: 100%
+    width: 100%;
   }
 
   .submitBtn {
@@ -111,4 +115,8 @@
   }
 }
 
-
+@media screen and (max-width: 768px) {
+  .pageHeader {
+    margin-top:1rem;
+  }
+}
