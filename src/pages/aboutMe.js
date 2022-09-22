@@ -1,7 +1,8 @@
 import React from 'react'
 import '../styles/aboutMe.css'
-// import Carousel from '../components/Carousel';
 import Footer from '../components/footer';
+
+
 export default function About() {
   return (
     <div className='AboutContainer' id='about-section'>
