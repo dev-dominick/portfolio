@@ -159,12 +159,12 @@ export default function Navbar() {
             component="a"
             href="/"
             sx={{
-              mr: 5,
+              mr: 1,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: ".01rem",
               color: "inherit",
               textDecoration: "none",
             }}
