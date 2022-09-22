@@ -48,21 +48,31 @@ export default function NavDrawer() {
 
     const list = (anchor) => (
         <Box
-            sx={{ width: 250 }}
+            sx={{
+                width: 250,
+            }}
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
                 {pages.map(({ title, to }) => (
-                    <ListItem key={ title } disablePadding>
+                    <ListItem key={title} disablePadding>
                         <ListItemButton
                             onClick={handleDrawerClose}
-                            component={ Link }
-                            to={ to }
+                            component={Link}
+                            to={to}
                         >
                             <ListItemText
-                                primary={ title }
+                                primary={title}
+                                sx={{
+                                    textAlign: 'center !important',
+                                    marginTop: '1rem !important',
+                                    marginBottom: '1rem !important',
+                                    fontFamily: 'monospace,sans-serif !important',
+                                    fontSize: '2rem !important',
+                                    lineHeight: '1.25 !important',
+                                }}
                             />
                         </ListItemButton>
                     </ListItem>
@@ -98,6 +108,14 @@ export default function NavDrawer() {
                 anchor='right'
                 open={anchorEl}
                 onClose={handleDrawerClose}
+                sx={{
+                    // "& .MuiPaper-root": {
+                    //     backgroundColor: 'red !important !important'
+                    // },
+                    "& .MuiDrawer-paper": {
+                        backgroundColor: 'grey !important'
+                    },
+                }}
             >
                 {list(state)}
             </Drawer>
