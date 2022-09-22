@@ -20,7 +20,7 @@ const NavButton = styled(ButtonUnstyled)({
   color: 'white',
   transition: 'all 150ms ease',
   cursor: 'pointer',
-  padding: '.5rem 0.5rem 0.5rem 0.5rem',
+  padding: ".5rem 0.5rem 0.5rem 0.5rem",
   margin: '0.9rem 1.5rem 2rem 1.5rem',
 
   '&:hover': {
@@ -46,7 +46,7 @@ const FullScreenHeaderSx = {
   margin: '.9rem 1.5rem 2rem 1.5rem',
   padding: '.5rem 0.5rem 0.5rem 0.5rem',
   display: { xs: "none", sm: "none", md: "flex", lg: "flex", xl: "flex", },
-  paddingLeft: { sm: "none", md: "1rem", lg: "5rem", xl: "8rem" },
+  paddingLeft: { sm: "none", md: "0rem", lg: "5rem", xl: "8rem" },
   fontFamily: "monospace",
   fontSize: '2rem',
   fontWeight: 700,
@@ -122,7 +122,6 @@ export default function Navbar() {
         maxWidth="x1"
         sx={{
           padding: "1rem",
-          // display: { xs: "", sm: "", md: "flex", lg: "flex", xl: "flex", },
           // alignContent: { xs: "", sm: "", md: "center", lg: "center", xl: "center", },
           // alignItems: { xs: "", sm: "", md: "center", lg: "center", xl: "center", },
           // flexFlow: { xs: "", sm: "", md: "row nowrap", lg: "row nowrap", xl: "row nowrap", },
@@ -138,16 +137,8 @@ export default function Navbar() {
             flexDirection: { xs: "row-reverse", sm: "row-reverse", md: "row", lg: "row", xl: "row" },
           }} >
 
-
-
-
-
           {/* Menu Icon for mobile */}
           < NavDrawer />
-
-
-
-
 
 
           {/* header for full screen: Dominick The Dev */}
@@ -187,7 +178,7 @@ export default function Navbar() {
               padding: 1,
               flexGrow: 1,
               display: { xs: "none", sm: "none", md: "flex", lg: "flex", xl: "flex", },
-              paddingRight: { sm: "none", md: "1rem", lg: "5rem", xl: "8rem" },
+              paddingRight: { sm: "none", md: "0rem", lg: "5rem", xl: "8rem" },
               // flexFlow: { xs: "", sm: "", md: "row nowrap", lg: "row nowrap", xl: "row nowrap", },
               // alignItems: { xs: "", sm: "", md: "center", lg: "center", xl: "center", },
               // height: { xs: "", sm: "", md: "5rem", lg: "5rem", xl: "5rem", },
@@ -201,6 +192,23 @@ export default function Navbar() {
               key="about"
               component={Link}
               to="about"
+              sx={{
+                padding: {
+                  xs: "none",
+                  sm: "none",
+                  md: ".5rem 0.5rem 0.5rem 0.5rem",
+                  lg: ".5rem 0.5rem 0.5rem 0.5rem",
+                  xl: ".5rem 0.5rem 0.5rem 0.5rem",
+                },
+
+                margin: {
+                  xs: "none",
+                  sm: "none",
+                  md: '0.9rem .5rem 2rem .5rem',
+                  lg: '0.9rem 1.5rem 2rem 1.5rem',
+                  xl: '0.9rem 1.5rem 2rem 1.5rem',
+                },
+              }}
             >
               About Me
             </NavButton>
@@ -212,6 +220,23 @@ export default function Navbar() {
               component={Link}
               to="/projects"
               variant="contained"
+              sx={{
+                padding: {
+                  xs: "none",
+                  sm: "none",
+                  md: ".5rem 0.5rem 0.5rem 0.5rem",
+                  lg: ".5rem 0.5rem 0.5rem 0.5rem",
+                  xl: ".5rem 0.5rem 0.5rem 0.5rem",
+                },
+
+                margin: {
+                  xs: "none",
+                  sm: "none",
+                  md: '0.9rem .5rem 2rem .5rem',
+                  lg: '0.9rem 1.5rem 2rem 1.5rem',
+                  xl: '0.9rem 1.5rem 2rem 1.5rem',
+                },
+              }}
             >
               Projects
             </NavButton>
@@ -223,6 +248,23 @@ export default function Navbar() {
               component={Link}
               to="/contact"
               variant="contained"
+              sx={{
+                padding: {
+                  xs: "none",
+                  sm: "none",
+                  md: ".5rem 0.5rem 0.5rem 0.5rem",
+                  lg: ".5rem 0.5rem 0.5rem 0.5rem",
+                  xl: ".5rem 0.5rem 0.5rem 0.5rem",
+                },
+
+                margin: {
+                  xs: "none",
+                  sm: "none",
+                  md: '0.9rem .5rem 2rem .5rem',
+                  lg: '0.9rem 1.5rem 2rem 1.5rem',
+                  xl: '0.9rem 1.5rem 2rem 1.5rem',
+                },
+              }}
             >
               Contact Me
             </NavButton>

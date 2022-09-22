@@ -55,14 +55,14 @@ export default function NavDrawer() {
         >
             <List>
                 {pages.map(({ title, to }) => (
-                    <ListItem key=  { title } disablePadding>
+                    <ListItem key={ title } disablePadding>
                         <ListItemButton
                             onClick={handleDrawerClose}
                             component={ Link }
                             to={ to }
                         >
-                            <ListItemText 
-                            primary={ title } 
+                            <ListItemText
+                                primary={ title }
                             />
                         </ListItemButton>
                     </ListItem>
@@ -78,26 +78,29 @@ export default function NavDrawer() {
     return (
         <div>
 
-            <React.Fragment>
-                <IconButton
-                    size="large"
-                    aria-label="account of current user"
-                    aria-controls="menu-appbar"
-                    aria-haspopup="true"
-                    onClick={handleDrawerOpen}
-                    onClose={handleDrawerClose}
-                    color="inherit"
-                >
-                    <MenuIcon />
-                </IconButton>
-                <Drawer
-                    anchor='right'
-                    open={anchorEl}
-                    onClose={handleDrawerClose}
-                >
-                    {list(state)}
-                </Drawer>
-            </React.Fragment>
+            <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleDrawerOpen}
+                onClose={handleDrawerClose}
+                color="inherit"
+            >
+                <MenuIcon
+                    sx={{
+                        display: { md: 'none', lg: 'none', }
+                    }}
+
+                />
+            </IconButton>
+            <Drawer
+                anchor='right'
+                open={anchorEl}
+                onClose={handleDrawerClose}
+            >
+                {list(state)}
+            </Drawer>
 
         </div>
     );
