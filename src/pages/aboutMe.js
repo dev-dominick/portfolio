@@ -14,7 +14,7 @@ export default function About() {
 
           <p className="aboutMeText">
             A Full-stack web developer with experience building custom software and web applications.
-            Passionate about building reusable and scalable code.  Looking foward to building and contributing to projects
+            Passionate about building reusable and scalable code.  Looking forward to building and contributing to projects
             with my knowledge of multiple programming technologies.
           </p>
 
