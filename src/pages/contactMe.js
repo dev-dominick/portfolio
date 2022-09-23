@@ -10,6 +10,7 @@ function Contact() {
   return (
     <div className="ContactPageStyles">
       <h1 className="pageHeader">Contact Me</h1>
+      <h4>Dominickthedev@gmail.com</h4>
       < Socials />
       < ContactForm />
       < Footer />
