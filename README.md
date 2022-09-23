@@ -21,12 +21,11 @@ To install this application, fork my repo, clone the project in your terminal, n
 
 www.Dominickthedev.com
 
-<!-- ![alt text](./public/react-portfolio.png) -->
+![alt text](./src/assets/dominickthedev.png)
 
 ## Credits
 
 Isaak - github.com/CallMeIce
-Kyle - github.com/kgiunta
 
 ## License
 
