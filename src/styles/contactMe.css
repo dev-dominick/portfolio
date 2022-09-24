@@ -13,11 +13,42 @@
   top: 0;
 }
 
+.pageHeader {
+  margin-top: 8rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+  min-height: 10rem;
+  margin-bottom: 3rem;
+}
+
+.contactInfoText {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contactInfoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+  border: 1px solid yellow;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 40%;
+}
+
+
 .formBox {
   width: 55%;
   display: flex;
   flex-direction: column;
-  padding: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 7rem;
 }
 
 .inputRow {
@@ -78,7 +109,7 @@
 
 @media screen and (max-width: 1400px) {
   .pageHeader {
-    margin-top: 10rem;
+    margin-top: 8rem;
   }
 
   .formBox {
@@ -86,14 +117,38 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .contactInfo {
+    width: 60%;
+  }
+}
+
+
+@media screen and (max-width: 1100px) {
+.pageHeader {
+  margin-top: 8rem;
+}
+
+.contactInfo {
+  width: 70%;
+}
+}
+
+
 @media screen and (max-width: 900px) {
   .pageHeader {
-    margin-top: 2rem;
+    margin-top: 7rem;
+  }
+
+  .contactInfo {
+    width: 80%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .formBox {
     width: 75%;
-    padding: 3rem 0 0 0;
+    margin-top: 1.5rem;
   }
 
   .inputRow {
@@ -117,6 +172,17 @@
 
 @media screen and (max-width: 768px) {
   .pageHeader {
-    margin-top:1rem;
+    margin-top: 6rem;
+  }
+
+  .contactInfo {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0rem;
+    gap: .5rem;
+  }
+
+  .contactInfoBox {
+    width: 75%;
   }
 }
