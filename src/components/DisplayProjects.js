@@ -1,7 +1,44 @@
 import * as React from 'react';
+import Box from '@mui/material/Box';
+// import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: '42rem',
+  height: '27rem',
+  borderRadius: '2rem',
+  bgcolor: 'grey !important',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+  padding: '25px'
+};
 
 
 export default function DisplayProjects() {
+
+  const [open, setOpen] = React.useState(false);
+
+  const [apple, setApple] = React.useState(null);
+
+  React.useEffect(() => {
+    console.log(apple);
+  }, [apple])
+
+
+  const handleOpen = (p) => {
+    setApple(p);
+    setOpen(true);
+  }
+
+  const handleClose = () => {
+    setApple(null);
+    setOpen(false);
+  }
 
   let projects = [
     {
@@ -74,46 +111,77 @@ export default function DisplayProjects() {
 
     <div class="project-section-area">
 
+      <Modal
+        open={open}
+        onClose={handleClose}
+      // aria-labelledby="modal-modal-title"
+      // aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <div className='modalInfoContainer'>
+            <h1 className='modalTtitle'>
+              {apple && apple.title}
+            </h1>
 
-      {projects.map(({ title, languages, description, src, alt, repo, site }) => (
+            <div className='modalPictureContainer'>
+              <img className='modalPicture' src={'/assets-copy/' + ( apple && apple.src )} alt={apple && apple.alt} />
+
+            </div>
+
+            <h3 className='modalText'>{ apple && apple.description }</h3>
+            <h3 className='modalText'>{ apple && apple.languages }</h3>
 
 
-        <div className='project-container'>
+            <div className='linkBox'>
+              <a href={`${apple && apple.repo}`}>
+                <img className='githubMark' src={require('../assets/github-64-dark.png')} alt={"GitHub"}></img>
+              </a>
+              <a href={`${apple && apple.site}`}>
+                <img className='livesiteMark' src={require('../assets/livesite.png')} alt={"Live Site"}></img>
+              </a>
+            </div>
+          </div>
+        </Box>
+      </Modal>
+
+
+      {projects.map((p) => (
+
+
+        <div className='project-container' onClick={() => handleOpen(p)}>
 
 
           <div className="project-picture view-first">
-            <img id='src' src={('/assets-copy/' + src)} alt={alt} />
-            <a href={`${ repo }`}>
-              <img className='githubMark' src={require('../assets/github-64-dark.png')} alt={"GitHub"}></img>
-            </a>
-            <a href={`${ site }`}>
-              <img className='livesiteMark' src={require('../assets/livesite.png')} alt={"Live Site"}></img>
-            </a>
+
+            <img id='src' src={('/assets-copy/' + p.src)} alt={p.alt} />
+
+
+            {/* mask */}
             <div className='mask'>
-            <h4>{ title }</h4>
-            <p>{ description }</p>
+              <h4>{p.title}</h4>
+              <p>{p.description}</p>
               {/* <a href='#' className='info'>read more</a> */}
             </div>
           </div>
 
-
-          {/* <div className='description-container'>
-            <h3>
-              {title}
-            </h3>
-            <p>
-              {description}
-            </p>
-            <div>
-              {languages}
-            </div>
+          {/* <div className='linkBox'>
+            <a href={`${ p.repo }`}>
+              <img className='githubMark' src={require('../assets/github-64-dark.png')} alt={"GitHub"}></img>
+            </a>
+            <a href={`${ p.site }`}>
+              <img className='livesiteMark' src={require('../assets/livesite.png')} alt={"Live Site"}></img>
+            </a>
           </div> */}
+
+
+
+
         </div>
       ))}
+
     </div>
   );
 }
-
 
 
 
