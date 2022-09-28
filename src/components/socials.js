@@ -3,7 +3,7 @@ import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import EmailIcon from '@mui/icons-material/Email';
 import '../styles/socials.css'
 
 
@@ -64,11 +64,11 @@ export default function Socials() {
       />
       <BottomNavigationAction
         sx={styles.icon}
-        href="#comingsoon"
-        target="_blank"
+        href="/contact"
+        // target="_blank"
         // label="Twitter"
         value="nearby"
-        icon={<TwitterIcon />}
+        icon={<EmailIcon />}
       />
     </BottomNavigation>
   );
