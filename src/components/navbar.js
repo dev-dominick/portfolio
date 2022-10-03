@@ -69,16 +69,18 @@ export default function Navbar() {
 
 
 
-
+// set this useEffect to add style on button of page you are on
   React.useEffect(() => {
+    // which page the app is routed too
     let page = location.pathname;
-    console.log(page);
     let pageName = "https://dominickthedev.com" + page;
+    // selecting element by class 
     const id = document.getElementsByClassName("toUnderline");
-    console.log(id);
+    // looping over the 3 IDs
+    // if pagename = the page with that id, styles will be applied
     for (let i = 0; i < id.length; i++) {
       if (pageName === id[i].href) {
-
+        console.log(id[i].href);
         id[i].style.boxShadow = '0 0 0 0.2rem rgba(238,255,4)';
 
         // id[i].style.textDecoration = "underline";
@@ -95,11 +97,11 @@ export default function Navbar() {
   });
 
   React.useEffect(() => {
-    console.log(scrolled);
+    // setting to check if script is being run in webpage
     if (typeof window !== "undefined") {
       window.onscroll = () => {
+        // assigning value verticle scroll to check if page has been scrolled
         let currentScrollPos = window.pageYOffset;
-        console.log(currentScrollPos);
         if (currentScrollPos === 0) {
           setScrolled(false);
         } else {
