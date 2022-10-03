@@ -1,10 +1,24 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { checkEmail, checkName, checkMessage } from '../utils/helpers';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
 const REACT_APP_YOUR_SERVICE_ID = process.env.REACT_APP_YOUR_SERVICE_ID
 const REACT_APP_YOUR_TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID
 const REACT_APP_YOUR_PUBLIC_KEY = process.env.REACT_APP_YOUR_PUBLIC_KEY
 
-
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    height: 150,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+};
 
 export default function ContactForm() {
 
@@ -13,7 +27,41 @@ export default function ContactForm() {
     const [user_name, setUserName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    // const [errorMessage, setErrorMessage] = useState("");
+
+    const [errorMessage, setErrorMessage] = useState("");
+
+    const [open, setOpen] = React.useState(false);
+
+    const modalText = [
+        "Please complete the form to send me a message",
+        "Please enter your name",
+        "Please enter your message",
+        "Message recieved!"
+    ];
+
+    const handleEmpty = () => {
+        setOpen(true);
+        setErrorMessage(modalText[0]);
+    };
+
+    const handleNoName = () => {
+        setOpen(true);
+        setErrorMessage(modalText[1]);
+    };
+
+    const handleNoMessage = () => {
+        setOpen(true);
+        setErrorMessage(modalText[2]);
+    };
+
+    const handleConfirmation = () => {
+        setOpen(true);
+        setErrorMessage(modalText[3]);
+    };
+
+    const handleClose = () => setOpen(false);
+
+
 
     const clearForm = () => {
         setEmail("");
@@ -24,16 +72,36 @@ export default function ContactForm() {
 
     const sendEmail = (e) => {
         e.preventDefault();
+        console.log('logging e');
+        console.log('                    ');
         console.log(e)
+        console.log('                    ');
 
-        emailjs.sendForm(REACT_APP_YOUR_SERVICE_ID, REACT_APP_YOUR_TEMPLATE_ID, form.current, REACT_APP_YOUR_PUBLIC_KEY)
-            .then((result) => {
-                clearForm();
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            }
-            );
+        if (!checkEmail(email) && !checkName(user_name)) {
+            handleEmpty()
+            return;
+        } else if (!checkName(user_name)) {
+            handleNoName();
+            return;
+        } else if (!checkMessage(message)) {
+            handleNoMessage();
+            return;
+        }  else {
+            emailjs.sendForm(
+                REACT_APP_YOUR_SERVICE_ID,
+                REACT_APP_YOUR_TEMPLATE_ID, form.current,
+                REACT_APP_YOUR_PUBLIC_KEY
+            )
+
+                .then((result) => {
+                    clearForm();
+                    handleConfirmation();
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                }
+                );
+        }
     };
 
     return (
@@ -61,7 +129,7 @@ export default function ContactForm() {
                     placeholder="Email"
                 />
             </div>
-            
+
             <textarea
                 type="text"
                 name="message"
@@ -71,13 +139,25 @@ export default function ContactForm() {
                 placeholder="Message"
             />
 
-            <input className='submitBtn' type="submit" value="Send Message" />
+            <input
+                className='submitBtn'
+                type="submit"
+                value="Send Message"
 
-            {/* {errorMessage && (
-                <div>
-                    <p className="error-text">{errorMessage}</p>
-                </div>
-            )} */}
+            />
+
+            {errorMessage && (
+                <Modal
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description"
+                >
+                    <Box sx={style}>
+                        <p className="error-text">{errorMessage}</p>
+                    </Box>
+                </Modal>
+            )}
 
         </form>
 
