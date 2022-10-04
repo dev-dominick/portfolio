@@ -19,7 +19,8 @@ const contactModalBoxStyle = {
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
-    backgroundColor: 'rgb(160,160,160)'
+    backgroundColor: 'rgb(160,160,160)',
+    borderRadius: '2rem'
 
 };
 
@@ -36,9 +37,9 @@ export default function ContactForm() {
     const [open, setOpen] = React.useState(false);
 
     const modalText = [
-        "Please complete the form to send me a message",
-        "Please enter your name",
-        "Please enter your message",
+        "Please complete the form to send me a message!",
+        "Please enter your name!",
+        "Please enter your message!",
         "Message recieved!"
     ];
 
