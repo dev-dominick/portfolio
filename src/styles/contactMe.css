@@ -107,6 +107,25 @@
   cursor: pointer;
 }
 
+.contactModalText {
+  border: 1px solid transparent;
+  text-align: center;
+  margin-top: 7%;
+  /* margin-bottom: 50%; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.error-text {
+  font-size: 1.35rem;
+}
+
+.closeBtn {
+  float: right;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1400px) {
   .pageHeader {
     margin-top: 8rem;

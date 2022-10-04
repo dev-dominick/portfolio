@@ -3,11 +3,12 @@ import emailjs from '@emailjs/browser';
 import { checkEmail, checkName, checkMessage } from '../utils/helpers';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
+import CloseIcon from '@mui/icons-material/Close';
 const REACT_APP_YOUR_SERVICE_ID = process.env.REACT_APP_YOUR_SERVICE_ID
 const REACT_APP_YOUR_TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID
 const REACT_APP_YOUR_PUBLIC_KEY = process.env.REACT_APP_YOUR_PUBLIC_KEY
 
-const style = {
+const contactModalBoxStyle = {
     position: 'absolute',
     top: '50%',
     left: '50%',
@@ -18,6 +19,8 @@ const style = {
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
+    backgroundColor: 'rgb(160,160,160)'
+
 };
 
 export default function ContactForm() {
@@ -153,8 +156,11 @@ export default function ContactForm() {
                     aria-labelledby="modal-modal-title"
                     aria-describedby="modal-modal-description"
                 >
-                    <Box sx={style}>
-                        <p className="error-text">{errorMessage}</p>
+                    <Box sx={contactModalBoxStyle}>
+                        <div className='closeBtn' onClick={ handleClose }>< CloseIcon /></div>
+                        <div className='contactModalText'>
+                            <h4 className="error-text">{errorMessage}</h4>
+                        </div>
                     </Box>
                 </Modal>
             )}
