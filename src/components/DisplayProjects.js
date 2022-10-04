@@ -2,6 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 // import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import CloseIcon from '@mui/icons-material/Close';
 
 const style = {
   position: 'absolute',
@@ -118,6 +119,7 @@ export default function DisplayProjects() {
       // aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          <div className='closeProjectBtn' onClick={ handleClose }>< CloseIcon /></div>
           <div className='modalInfoContainer'>
             <h1 className='modalTtitle'>
               {apple && apple.title}

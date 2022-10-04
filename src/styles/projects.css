@@ -79,8 +79,8 @@
 }
 
 .modalText {
-  margin-top: 1.2rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
 }
 
 .linkBox {
@@ -193,6 +193,11 @@
 .css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop {
   background-color: rgba(0, 0, 0, 0.45) !important;
   
+}
+
+.closeProjectBtn {
+  float: right;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {
