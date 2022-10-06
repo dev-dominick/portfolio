@@ -18,7 +18,7 @@ export default function About() {
             with my knowledge of multiple programming technologies.
           </p>
 
-          <a class='btnLink' href={require('../assets/DominickDevResume.pdf')} target='_blank' rel='noreferrer'>
+          <a class='btnLink' href={require('../assets/DeveloperResume.pdf')} target='_blank' rel='noreferrer'>
             <span className='resumeBtn'>Download Resume</span>
           </a>
         </div>
