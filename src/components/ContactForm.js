@@ -39,6 +39,7 @@ export default function ContactForm() {
     const modalText = [
         "Please complete the form to send me a message!",
         "Please enter your name!",
+        "Please enter a vaild email!",
         "Please enter your message!",
         "Message recieved!"
     ];
@@ -53,14 +54,19 @@ export default function ContactForm() {
         setErrorMessage(modalText[1]);
     };
 
-    const handleNoMessage = () => {
+    const handleIncompleteEmail = () => {
         setOpen(true);
         setErrorMessage(modalText[2]);
     };
 
-    const handleConfirmation = () => {
+    const handleNoMessage = () => {
         setOpen(true);
         setErrorMessage(modalText[3]);
+    };
+
+    const handleConfirmation = () => {
+        setOpen(true);
+        setErrorMessage(modalText[4]);
     };
 
     const handleClose = () => setOpen(false);
@@ -86,6 +92,9 @@ export default function ContactForm() {
             return;
         } else if (!checkName(user_name)) {
             handleNoName();
+            return;
+        } else if (!checkEmail(email)) {
+            handleIncompleteEmail();
             return;
         } else if (!checkMessage(message)) {
             handleNoMessage();
