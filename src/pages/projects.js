@@ -1,20 +1,22 @@
 import React from 'react'
 import "../styles/projects.css";
 import DisplayProjects from "../components/DisplayProjects";
-import Footer from '../components/footer';
+import Footer from '../components/Footer/footer';
 
-export default function Projects() {
-  return (
+const Projects = () => {
+  // return (
     
-    <div className='ProjectsPageStyles' id='project-section'>
+  //   <div className='ProjectsPageStyles' id='project-section'>
 
-      <h1 className='workHeader'>Projects</h1>
+  //     <h1 className='workHeader'>Projects</h1>
 
       
-        < DisplayProjects />
+  //       < DisplayProjects />
       
-        < Footer />
+  //       < Footer />
 
-    </div>
-  );
-}
+  //   </div>
+  // );
+};
+
+export default Projects;

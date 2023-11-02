@@ -1,22 +1,15 @@
-import React from 'react'
-import '../styles/homeintro.css'
 import Socials from './socials'
 
-function HomeIntro() {
+import "../styles/ComponentStyles/homeintro.css";
+
+const HomeIntro = () => {
   return (
-    <div className='homeIntroContainer' >
-
-      <div className='nameContainer'>
-        <h1 className='name'>Dominick Albano</h1>
-        <h2 className='title'>Full Stack Web Developer</h2>
-      </div>
-
-      <div className='socialsContainer'>
-        < Socials />
-      </div>
-
+    <div className="homeIntroContent">
+      <h1 className="nameAndTitle name">Dominick Albano</h1>
+      <h3 className="nameAndTitle title">Software Engineer</h3>
+      <Socials />
     </div>
-  )
+  );
 }
 
 export default HomeIntro

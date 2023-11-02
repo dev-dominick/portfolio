@@ -1,15 +1,14 @@
 .footerContainer {
     position: absolute;
-    width: 100%;
+    min-width: 100vw;
     display: flex;
     justify-content: center;
     bottom: 0;
-    /* top: 0; */
 }
 
 .footer {
     margin-bottom: 1rem;
-    font-size: 10px;
+    font-size: 14px;
     color: white;
     text-align: center;
     cursor: default;

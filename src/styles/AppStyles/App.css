@@ -1,0 +1,17 @@
+
+
+.routesContainer {
+  font-size: calc(10px + 2vmin);
+  background-color: #242424;
+  /* box-shadow: inset 0 0 10rem 3rem black; */
+  color: white;
+  min-height: 100vh;
+  display: flex;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}

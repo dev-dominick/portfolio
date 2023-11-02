@@ -1,26 +1,18 @@
-import React from 'react'
-// import logo from '../logo.svg';
-import '../styles/home.css';
-import HomeIntro from '../components/homeIntro';
-import ParticlesContainer from '../components/Particles';
-import Footer from '../components/footer';
-export default function Home() {
+import HomeIntro from "../components/homeIntro";
+import ParticlesContainer from "../components/Particles";
 
+import "../styles/AppStyles/App.css";
+import "../styles/PageStyles/homePage.css";
+
+const Home = () => {
   return (
-    <div
-      className="Home"
-    >
-      <ParticlesContainer />
-
-      < HomeIntro />
-      < Footer />
-
+    <div className="layout">
+      {/* <ParticlesContainer /> */}
+      <div className="homeIntroContainer">
+        <HomeIntro />
+      </div>
     </div>
   );
-}
+};
 
-
-
-
-
-
+export default Home;

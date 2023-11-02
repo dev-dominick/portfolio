@@ -1,0 +1,13 @@
+.MuiTypography-root {
+  font-family: monospace, sans-serif !important;
+  font-size: 2rem !important;
+  line-height: 1.25 !important;
+}
+
+.drawerheader {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+  text-decoration: underline;
+}

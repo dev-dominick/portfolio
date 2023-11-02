@@ -1,0 +1,29 @@
+body {
+  background-color: black;
+  margin: 0;
+  font-family: monospace, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h3 {
+  margin: 0 0 0 0;
+}
+
+p {
+  margin: 0 0 0 0;
+}
+
+::selection {
+  background: #eeff04;
+  color: black;
+}
